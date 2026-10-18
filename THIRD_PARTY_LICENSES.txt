@@ -1,9 +1,9 @@
 THIRD-PARTY DEPENDENCY LICENSES
 Generated from the installed lockfile dependencies, including build tools.
 
-@alloc/quick-lru@5.2.0
+@alloc/quick-lru@5.3.0
 License: MIT
-Source: sindresorhus/quick-lru
+Source: https://github.com/aleclarson/quick-lru
 
 --- license ---
 MIT License
@@ -18,7 +18,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-@ark-ui/react@5.30.0
+@ark-ui/react@5.39.3
 License: MIT
 Source: git+https://github.com/chakra-ui/ark.git
 
@@ -47,7 +47,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@babel/code-frame@7.27.1
+@babel/code-frame@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -77,7 +77,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/compat-data@7.28.5
+@babel/compat-data@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -107,7 +107,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/core@7.28.5
+@babel/core@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -137,7 +137,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/generator@7.28.5
+@babel/generator@7.29.8
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -167,7 +167,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-compilation-targets@7.27.2
+@babel/helper-compilation-targets@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -197,7 +197,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-globals@7.28.0
+@babel/helper-globals@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -227,7 +227,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-module-imports@7.27.1
+@babel/helper-module-imports@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -257,7 +257,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-module-transforms@7.28.3
+@babel/helper-module-transforms@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -287,7 +287,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-plugin-utils@7.27.1
+@babel/helper-plugin-utils@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -317,7 +317,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-string-parser@7.27.1
+@babel/helper-string-parser@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -347,7 +347,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-validator-identifier@7.28.5
+@babel/helper-validator-identifier@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -377,7 +377,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helper-validator-option@7.27.1
+@babel/helper-validator-option@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -407,7 +407,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/helpers@7.28.4
+@babel/helpers@7.29.10
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -438,7 +438,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/parser@7.28.5
+@babel/parser@7.29.9
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -465,7 +465,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-@babel/plugin-transform-react-jsx-self@7.27.1
+@babel/plugin-transform-react-jsx-self@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -495,7 +495,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/plugin-transform-react-jsx-source@7.27.1
+@babel/plugin-transform-react-jsx-source@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -525,7 +525,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/runtime@7.28.4
+@babel/runtime@7.29.10
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -555,7 +555,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/template@7.27.2
+@babel/template@7.29.7
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -585,7 +585,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/traverse@7.28.5
+@babel/traverse@7.29.10
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -615,7 +615,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@babel/types@7.28.5
+@babel/types@7.29.8
 License: MIT
 Source: https://github.com/babel/babel.git
 
@@ -1375,7 +1375,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@esbuild/darwin-arm64@0.27.1
+@esbuild/darwin-arm64@0.27.7
 License: MIT
 Source: git+https://github.com/evanw/esbuild.git
 
@@ -1383,7 +1383,7 @@ No separate license file was shipped in this package; consult the package metada
 
 ==============================================================================
 
-@eslint-community/eslint-utils@4.9.0
+@eslint-community/eslint-utils@4.10.1
 License: MIT
 Source: https://github.com/eslint-community/eslint-utils
 
@@ -1441,7 +1441,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@eslint/config-array@0.21.1
+@eslint/config-array@0.21.2
 License: Apache-2.0
 Source: git+https://github.com/eslint/rewrite.git
 
@@ -2068,7 +2068,7 @@ Apache License
 
 ==============================================================================
 
-@eslint/eslintrc@3.3.3
+@eslint/eslintrc@3.3.7
 License: MIT
 Source: eslint/eslintrc
 
@@ -2540,7 +2540,7 @@ Apache License
 
 ==============================================================================
 
-@floating-ui/core@1.7.3
+@floating-ui/core@1.8.0
 License: MIT
 Source: https://github.com/floating-ui/floating-ui.git
 
@@ -2568,7 +2568,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@floating-ui/dom@1.7.4
+@floating-ui/dom@1.8.0
 License: MIT
 Source: https://github.com/floating-ui/floating-ui.git
 
@@ -2596,7 +2596,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@floating-ui/utils@0.2.10
+@floating-ui/utils@0.2.12
 License: MIT
 Source: https://github.com/floating-ui/floating-ui.git
 
@@ -2624,7 +2624,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-@humanfs/core@0.19.1
+@humanfs/core@0.19.2
 License: Apache-2.0
 Source: git+https://github.com/humanwhocodes/humanfs.git
 
@@ -2833,7 +2833,7 @@ Apache License
 
 ==============================================================================
 
-@humanfs/node@0.16.7
+@humanfs/node@0.16.8
 License: Apache-2.0
 Source: git+https://github.com/humanwhocodes/humanfs.git
 
@@ -3039,6 +3039,14 @@ Apache License
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+==============================================================================
+
+@humanfs/types@0.15.0
+License: Apache-2.0
+Source: git+https://github.com/humanwhocodes/humanfs.git
+
+No separate license file was shipped in this package; consult the package metadata and upstream source.
 
 ==============================================================================
 
@@ -3460,7 +3468,7 @@ Apache License
 
 ==============================================================================
 
-@internationalized/date@3.10.0
+@internationalized/date@3.12.4
 License: Apache-2.0
 Source: https://github.com/adobe/react-spectrum/tree/main/packages/@internationalized/date
 
@@ -3669,7 +3677,7 @@ Apache License
 
 ==============================================================================
 
-@internationalized/number@3.6.5
+@internationalized/number@3.6.7
 License: Apache-2.0
 Source: https://github.com/adobe/react-spectrum
 
@@ -3959,7 +3967,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@jridgewell/sourcemap-codec@1.5.5
+@jridgewell/sourcemap-codec@1.6.0
 License: MIT
 Source: git+https://github.com/jridgewell/sourcemaps.git
 
@@ -4013,7 +4021,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@mui/core-downloads-tracker@7.3.6
+@mui/core-downloads-tracker@7.3.11
 License: MIT
 Source: git+https://github.com/mui/material-ui.git
 
@@ -4071,7 +4079,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@mui/private-theming@7.3.6
+@mui/private-theming@7.3.11
 License: MIT
 Source: git+https://github.com/mui/material-ui.git
 
@@ -4100,7 +4108,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@mui/styled-engine@7.3.6
+@mui/styled-engine@7.3.10
 License: MIT
 Source: git+https://github.com/mui/material-ui.git
 
@@ -4129,7 +4137,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@mui/system@7.3.6
+@mui/system@7.3.11
 License: MIT
 Source: git+https://github.com/mui/material-ui.git
 
@@ -4158,7 +4166,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@mui/types@7.4.9
+@mui/types@7.4.12
 License: MIT
 Source: git+https://github.com/mui/material-ui.git
 
@@ -4187,7 +4195,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@mui/utils@7.3.6
+@mui/utils@7.3.11
 License: MIT
 Source: git+https://github.com/mui/material-ui.git
 
@@ -4303,7 +4311,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@pandacss/is-valid-prop@1.7.1
+@pandacss/is-valid-prop@1.12.1
 License: MIT
 Source: git+https://github.com/chakra-ui/panda.git
 
@@ -4393,7 +4401,7 @@ The licenses of externally maintained libraries from which parts of the Software
 
 ==============================================================================
 
-@rollup/rollup-darwin-arm64@4.53.5
+@rollup/rollup-darwin-arm64@4.64.9
 License: MIT
 Source: git+https://github.com/rollup/rollup.git
 
@@ -4499,7 +4507,7 @@ No separate license file was shipped in this package; consult the package metada
 
 ==============================================================================
 
-@swc/helpers@0.5.17
+@swc/helpers@0.5.23
 License: Apache-2.0
 Source: git+https://github.com/swc-project/swc.git
 
@@ -5000,7 +5008,7 @@ MIT License
 
 ==============================================================================
 
-@types/estree@1.0.8
+@types/estree@1.0.9
 License: MIT
 Source: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 
@@ -5464,7 +5472,7 @@ MIT License
 
 ==============================================================================
 
-@types/ws@8.18.1
+@types/ws@8.18.2
 License: MIT
 Source: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 
@@ -5812,9 +5820,9 @@ SOFTWARE.
 
 ==============================================================================
 
-@webgpu/types@0.1.68
+@webgpu/types@0.1.74
 License: BSD-3-Clause
-Source: gpuweb/types
+Source: git+https://github.com/gpuweb/types.git
 
 --- LICENSE ---
 Copyright 2022 WebGPU Developers
@@ -5846,7 +5854,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
 
-@zag-js/accordion@1.31.1
+@zag-js/accordion@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/accordion
 
@@ -5875,7 +5883,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/anatomy@1.31.1
+@zag-js/anatomy@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/machine
 
@@ -5904,7 +5912,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/angle-slider@1.31.1
+@zag-js/angle-slider@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/angle-slider
 
@@ -5933,7 +5941,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/aria-hidden@1.31.1
+@zag-js/aria-hidden@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/aria-hidden
 
@@ -5962,7 +5970,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/async-list@1.31.1
+@zag-js/async-list@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/async-list
 
@@ -5991,7 +5999,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/auto-resize@1.31.1
+@zag-js/auto-resize@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/auto-resize
 
@@ -6020,7 +6028,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/avatar@1.31.1
+@zag-js/avatar@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/avatar
 
@@ -6049,36 +6057,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/bottom-sheet@1.31.1
-License: MIT
-Source: https://github.com/chakra-ui/zag/tree/main/packages/bottom-sheet
-
---- LICENSE ---
-MIT License
-
-Copyright (c) 2021 Chakra UI
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-==============================================================================
-
-@zag-js/carousel@1.31.1
+@zag-js/carousel@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/carousel
 
@@ -6107,7 +6086,36 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/checkbox@1.31.1
+@zag-js/cascade-select@1.45.0
+License: MIT
+Source: https://github.com/chakra-ui/zag/tree/main/packages/machines/cascade-select
+
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2021 Chakra UI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+
+@zag-js/checkbox@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/checkbox
 
@@ -6136,7 +6144,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/clipboard@1.31.1
+@zag-js/clipboard@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/clipboard
 
@@ -6165,7 +6173,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/collapsible@1.31.1
+@zag-js/collapsible@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/collapsible
 
@@ -6194,7 +6202,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/collection@1.31.1
+@zag-js/collection@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/collection
 
@@ -6223,7 +6231,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/color-picker@1.31.1
+@zag-js/color-picker@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/color-picker
 
@@ -6252,7 +6260,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/color-utils@1.31.1
+@zag-js/color-utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/color-utils
 
@@ -6281,7 +6289,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/combobox@1.31.1
+@zag-js/combobox@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/combobox
 
@@ -6310,7 +6318,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/core@1.31.1
+@zag-js/core@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/machine
 
@@ -6339,7 +6347,36 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/date-picker@1.31.1
+@zag-js/date-input@1.45.0
+License: MIT
+Source: https://github.com/chakra-ui/zag/tree/main/packages/date-input
+
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2021 Chakra UI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+
+@zag-js/date-picker@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/date-picker
 
@@ -6368,7 +6405,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/date-utils@1.31.1
+@zag-js/date-utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/date-utils
 
@@ -6397,7 +6434,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/dialog@1.31.1
+@zag-js/dialog@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/dialog
 
@@ -6426,7 +6463,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/dismissable@1.31.1
+@zag-js/dismissable@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/interact-outside
 
@@ -6455,7 +6492,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/dom-query@1.31.1
+@zag-js/dom-query@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/dom-helpers
 
@@ -6484,7 +6521,36 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/editable@1.31.1
+@zag-js/drawer@1.45.0
+License: MIT
+Source: https://github.com/chakra-ui/zag/tree/main/packages/machines/drawer
+
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2021 Chakra UI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+
+@zag-js/editable@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/editable
 
@@ -6513,7 +6579,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/file-upload@1.31.1
+@zag-js/file-upload@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/file-upload
 
@@ -6542,7 +6608,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/file-utils@1.31.1
+@zag-js/file-utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/file-utils
 
@@ -6571,7 +6637,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/floating-panel@1.31.1
+@zag-js/floating-panel@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/floating-panel
 
@@ -6600,7 +6666,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/focus-trap@1.31.1
+@zag-js/focus-trap@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/focus-trap
 
@@ -6629,7 +6695,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/focus-visible@1.31.1
+@zag-js/focus-visible@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/focus-visible
 
@@ -6658,7 +6724,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/highlight-word@1.31.1
+@zag-js/highlight-word@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/highlight-word
 
@@ -6687,7 +6753,36 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/hover-card@1.31.1
+@zag-js/hotkeys@1.45.0
+License: MIT
+Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/hotkeys
+
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2021 Chakra UI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+
+@zag-js/hover-card@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/hover-card
 
@@ -6716,7 +6811,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/i18n-utils@1.31.1
+@zag-js/i18n-utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/i18n-utils
 
@@ -6745,7 +6840,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/image-cropper@1.31.1
+@zag-js/image-cropper@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/image-cropper
 
@@ -6774,7 +6869,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/interact-outside@1.31.1
+@zag-js/interact-outside@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/interact-outside
 
@@ -6803,7 +6898,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/json-tree-utils@1.31.1
+@zag-js/json-tree-utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/json-tree-utils
 
@@ -6832,7 +6927,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/listbox@1.31.1
+@zag-js/listbox@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/listbox
 
@@ -6861,7 +6956,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/live-region@1.31.1
+@zag-js/live-region@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/live-region
 
@@ -6890,7 +6985,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/marquee@1.31.1
+@zag-js/marquee@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/marquee
 
@@ -6919,7 +7014,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/menu@1.31.1
+@zag-js/menu@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/menu
 
@@ -6948,7 +7043,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/navigation-menu@1.31.1
+@zag-js/navigation-menu@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/navigation-menu
 
@@ -6977,7 +7072,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/number-input@1.31.1
+@zag-js/number-input@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/number-input
 
@@ -7006,7 +7101,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/pagination@1.31.1
+@zag-js/pagination@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/pagination
 
@@ -7035,7 +7130,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/password-input@1.31.1
+@zag-js/password-input@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/password-input
 
@@ -7064,7 +7159,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/pin-input@1.31.1
+@zag-js/pin-input@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/pin-input
 
@@ -7093,7 +7188,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/popover@1.31.1
+@zag-js/popover@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/popover
 
@@ -7122,7 +7217,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/popper@1.31.1
+@zag-js/popper@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/popper
 
@@ -7151,7 +7246,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/presence@1.31.1
+@zag-js/presence@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/presence
 
@@ -7180,7 +7275,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/progress@1.31.1
+@zag-js/progress@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/progress
 
@@ -7209,7 +7304,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/qr-code@1.31.1
+@zag-js/qr-code@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/qr-code
 
@@ -7238,7 +7333,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/radio-group@1.31.1
+@zag-js/radio-group@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/radio-group
 
@@ -7267,7 +7362,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/rating-group@1.31.1
+@zag-js/rating-group@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/rating
 
@@ -7296,7 +7391,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/react@1.31.1
+@zag-js/react@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/frameworks/react
 
@@ -7325,7 +7420,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/rect-utils@1.31.1
+@zag-js/rect-utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/rect
 
@@ -7354,7 +7449,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/remove-scroll@1.31.1
+@zag-js/remove-scroll@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/remove-scroll
 
@@ -7383,7 +7478,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/scroll-area@1.31.1
+@zag-js/scroll-area@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/scroll-area
 
@@ -7412,7 +7507,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/scroll-snap@1.31.1
+@zag-js/scroll-snap@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/scroll-snap
 
@@ -7441,7 +7536,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/select@1.31.1
+@zag-js/select@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/select
 
@@ -7470,7 +7565,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/signature-pad@1.31.1
+@zag-js/signature-pad@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/signature-pad
 
@@ -7499,7 +7594,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/slider@1.31.1
+@zag-js/slider@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/slider
 
@@ -7528,7 +7623,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/splitter@1.31.1
+@zag-js/splitter@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/splitter
 
@@ -7557,7 +7652,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/steps@1.31.1
+@zag-js/steps@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/steps
 
@@ -7586,7 +7681,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/store@1.31.1
+@zag-js/store@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/store
 
@@ -7615,7 +7710,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/switch@1.31.1
+@zag-js/switch@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/switch
 
@@ -7644,7 +7739,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/tabs@1.31.1
+@zag-js/tabs@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/tabs
 
@@ -7673,7 +7768,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/tags-input@1.31.1
+@zag-js/tags-input@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/tags-input
 
@@ -7702,7 +7797,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/timer@1.31.1
+@zag-js/timer@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/timer
 
@@ -7731,7 +7826,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/toast@1.31.1
+@zag-js/toast@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/toast
 
@@ -7760,7 +7855,36 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/toggle-group@1.31.1
+@zag-js/toc@1.45.0
+License: MIT
+Source: https://github.com/chakra-ui/zag/tree/main/packages/toc
+
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2021 Chakra UI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+
+@zag-js/toggle-group@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/toggle-group
 
@@ -7789,7 +7913,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/toggle@1.31.1
+@zag-js/toggle@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/toggle
 
@@ -7818,7 +7942,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/tooltip@1.31.1
+@zag-js/tooltip@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/tooltip
 
@@ -7847,9 +7971,9 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/tour@1.31.1
+@zag-js/tour@1.45.0
 License: MIT
-Source: https://github.com/chakra-ui/zag/tree/main/packages/tour
+Source: https://github.com/chakra-ui/zag/tree/main/packages/machines/tour
 
 --- LICENSE ---
 MIT License
@@ -7876,7 +8000,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/tree-view@1.31.1
+@zag-js/tree-view@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/tree-view
 
@@ -7905,7 +8029,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/types@1.31.1
+@zag-js/types@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/types
 
@@ -7934,7 +8058,7 @@ SOFTWARE.
 
 ==============================================================================
 
-@zag-js/utils@1.31.1
+@zag-js/utils@1.45.0
 License: MIT
 Source: https://github.com/chakra-ui/zag/tree/main/packages/utilities/core
 
@@ -8019,7 +8143,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-acorn@8.15.0
+acorn@8.19.0
 License: MIT
 Source: git+https://github.com/acornjs/acorn.git
 
@@ -8048,7 +8172,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-ajv@6.12.6
+ajv@6.15.0
 License: MIT
 Source: https://github.com/ajv-validator/ajv.git
 
@@ -8549,7 +8673,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-baseline-browser-mapping@2.9.8
+baseline-browser-mapping@2.11.29
 License: Apache-2.0
 Source: git+https://github.com/web-platform-dx/baseline-browser-mapping.git
 
@@ -8776,7 +8900,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-brace-expansion@1.1.12
+brace-expansion@1.1.21
 License: MIT
 Source: git://github.com/juliangruber/brace-expansion.git
 
@@ -8805,7 +8929,7 @@ SOFTWARE.
 
 ==============================================================================
 
-brace-expansion@2.0.2
+brace-expansion@2.1.7
 License: MIT
 Source: git://github.com/juliangruber/brace-expansion.git
 
@@ -8863,14 +8987,14 @@ THE SOFTWARE.
 
 ==============================================================================
 
-browserslist@4.28.1
+browserslist@4.29.3
 License: MIT
 Source: browserslist/browserslist
 
 --- LICENSE ---
 The MIT License (MIT)
 
-Copyright 2014 Andrey Sitnik <andrey@sitnik.ru> and other contributors
+Copyright 2014 Andrey Sitnik <andrey@sitnik.es> and other contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -8966,7 +9090,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-caniuse-lite@1.0.30001760
+caniuse-lite@1.0.30001816
 License: CC-BY-4.0
 Source: browserslist/caniuse-lite
 
@@ -10090,7 +10214,7 @@ SOFTWARE.
 
 ==============================================================================
 
-draco3d@1.5.7
+draco3d@1.5.9
 License: Apache-2.0
 Source: git+https://github.com/google/draco.git
 
@@ -10098,9 +10222,9 @@ No separate license file was shipped in this package; consult the package metada
 
 ==============================================================================
 
-electron-to-chromium@1.5.267
+electron-to-chromium@1.5.459
 License: ISC
-Source: https://github.com/kilian/electron-to-chromium/
+Source: git+https://github.com/Kilian/electron-to-chromium.git
 
 --- LICENSE ---
 Copyright 2018 Kilian Valkhof
@@ -10111,9 +10235,9 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 ==============================================================================
 
-enhanced-resolve@5.18.4
+enhanced-resolve@5.26.0
 License: MIT
-Source: git://github.com/webpack/enhanced-resolve.git
+Source: git+https://github.com/webpack/enhanced-resolve.git
 
 --- LICENSE ---
 Copyright JS Foundation and other contributors
@@ -10168,7 +10292,36 @@ THE SOFTWARE.
 
 ==============================================================================
 
-esbuild@0.27.1
+es-errors@1.3.0
+License: MIT
+Source: git+https://github.com/ljharb/es-errors.git
+
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2024 Jordan Harband
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+
+esbuild@0.27.7
 License: MIT
 Source: git+https://github.com/evanw/esbuild.git
 
@@ -10797,7 +10950,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
 
-esquery@1.6.0
+esquery@1.7.0
 License: BSD-3-Clause
 Source: https://github.com/estools/esquery.git
 
@@ -11069,7 +11222,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-fastq@1.19.1
+fastq@1.20.3
 License: ISC
 Source: git+https://github.com/mcollina/fastq.git
 
@@ -11105,7 +11258,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-fflate@0.6.10
+fflate@0.6.11
 License: MIT
 Source: https://github.com/101arrowz/fflate
 
@@ -11134,14 +11287,14 @@ SOFTWARE.
 
 ==============================================================================
 
-fflate@0.8.2
+fflate@0.8.3
 License: MIT
 Source: https://github.com/101arrowz/fflate
 
 --- LICENSE ---
 MIT License
 
-Copyright (c) 2023 Arjun Barrett
+Copyright (c) 2026 Arjun Barrett
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -11282,7 +11435,7 @@ SOFTWARE.
 
 ==============================================================================
 
-flatted@3.3.3
+flatted@3.4.4
 License: ISC
 Source: git+https://github.com/WebReflection/flatted.git
 
@@ -11555,7 +11708,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-hasown@2.0.2
+hasown@2.0.4
 License: MIT
 Source: git+https://github.com/inspect-js/hasOwn.git
 
@@ -11708,11 +11861,32 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
 
-html-parse-stringify@3.0.1
+html-parse-stringify@3.1.0
 License: MIT
 Source: https://github.com/henrikjoreteg/html-parse-stringify
 
-No separate license file was shipped in this package; consult the package metadata and upstream source.
+--- LICENSE ---
+MIT License
+
+Copyright (c) 2025 Henrik Joreteg <henrik@joreteg.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ==============================================================================
 
@@ -11851,9 +12025,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-ignore@7.0.5
+ignore@7.0.12
 License: MIT
-Source: git@github.com:kaelzhang/node-ignore.git
+Source: https://github.com/kaelzhang/node-ignore.git
 
 --- LICENSE-MIT ---
 Copyright (c) 2013 Kael Zhang <i@kael.me>, contributors
@@ -12002,7 +12176,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-is-core-module@2.16.1
+is-core-module@2.17.0
 License: MIT
 Source: git+https://github.com/inspect-js/is-core-module.git
 
@@ -12148,7 +12322,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ==============================================================================
 
-its-fine@2.0.0
+its-fine@2.1.1
 License: MIT
 Source: https://github.com/pmndrs/its-fine
 
@@ -12206,7 +12380,7 @@ SOFTWARE.
 
 ==============================================================================
 
-jiti@2.6.1
+jiti@2.7.0
 License: MIT
 Source: unjs/jiti
 
@@ -12264,7 +12438,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-js-yaml@4.1.1
+js-yaml@4.3.2
 License: MIT
 Source: nodeca/js-yaml
 
@@ -13974,7 +14148,7 @@ defined by the Mozilla Public License, v. 2.0.
 
 ==============================================================================
 
-lilconfig@3.1.3
+lilconfig@3.1.4
 License: MIT
 Source: https://github.com/antonk52/lilconfig
 
@@ -14281,7 +14455,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-minimatch@3.1.2
+minimatch@3.1.5
 License: ISC
 Source: git://github.com/isaacs/minimatch.git
 
@@ -14304,7 +14478,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ==============================================================================
 
-minimatch@9.0.5
+minimatch@9.0.9
 License: ISC
 Source: git://github.com/isaacs/minimatch.git
 
@@ -14327,7 +14501,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ==============================================================================
 
-motion-dom@12.23.23
+motion-dom@12.43.0
 License: MIT
 Source: https://github.com/motiondivision/motion
 
@@ -14356,7 +14530,7 @@ SOFTWARE.
 
 ==============================================================================
 
-motion-utils@12.23.6
+motion-utils@12.39.0
 License: MIT
 Source: https://github.com/motiondivision/motion
 
@@ -14443,7 +14617,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-nanoid@3.3.11
+nanoid@3.3.20
 License: MIT
 Source: ai/nanoid
 
@@ -14479,9 +14653,9 @@ No separate license file was shipped in this package; consult the package metada
 
 ==============================================================================
 
-node-releases@2.0.27
+node-releases@2.0.59
 License: MIT
-Source: git+https://github.com/chicoxyzzy/node-releases.git
+Source: https://github.com/chicoxyzzy/node-releases.git
 
 --- LICENSE ---
 The MIT License
@@ -14831,7 +15005,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-perfect-freehand@1.2.2
+perfect-freehand@1.2.3
 License: MIT
 Source: https://github.com/steveruizok/perfect-freehand
 
@@ -14883,7 +15057,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ==============================================================================
 
-picomatch@2.3.1
+picomatch@2.3.2
 License: MIT
 Source: micromatch/picomatch
 
@@ -14912,7 +15086,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-picomatch@4.0.3
+picomatch@4.0.7
 License: MIT
 Source: micromatch/picomatch
 
@@ -14920,35 +15094,6 @@ Source: micromatch/picomatch
 The MIT License (MIT)
 
 Copyright (c) 2017-present, Jon Schlinkert.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-==============================================================================
-
-pify@2.3.0
-License: MIT
-Source: sindresorhus/pify
-
---- license ---
-The MIT License (MIT)
-
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -15111,9 +15256,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-postcss-selector-parser@6.1.2
+postcss-selector-parser@6.1.4
 License: MIT
-Source: postcss/postcss-selector-parser
+Source: https://github.com/postcss/postcss-selector-parser.git
 
 --- LICENSE-MIT ---
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
@@ -15199,14 +15344,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-postcss@8.5.6
+postcss@8.5.30
 License: MIT
 Source: postcss/postcss
 
 --- LICENSE ---
 The MIT License (MIT)
 
-Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>
+Copyright 2013 Andrey Sitnik <andrey@sitnik.es>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -15567,9 +15712,9 @@ SOFTWARE.
 
 ==============================================================================
 
-react-is@19.2.3
+react-is@19.3.1
 License: MIT
-Source: https://github.com/facebook/react.git
+Source: https://github.com/react/react.git
 
 --- LICENSE ---
 MIT License
@@ -15812,14 +15957,14 @@ SOFTWARE.
 
 ==============================================================================
 
-read-cache@1.0.0
+read-cache@1.0.2
 License: MIT
 Source: git+https://github.com/TrySound/read-cache.git
 
 --- LICENSE ---
 The MIT License (MIT)
 
-Copyright 2016 Bogdan Chadkin <trysound@yandex.ru>
+Copyright 2016 Bogdan Chadkin <opensource@trysound.io>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -15895,9 +16040,9 @@ IN THE SOFTWARE.
 
 ==============================================================================
 
-readable-stream@4.7.0
+readable-stream@4.8.0
 License: MIT
-Source: git://github.com/nodejs/readable-stream
+Source: https://github.com/nodejs/readable-stream
 
 --- LICENSE ---
 Node.js is licensed for use as follows:
@@ -16205,7 +16350,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-resolve@1.22.11
+resolve@1.22.13
 License: MIT
 Source: ssh://github.com/browserify/resolve.git
 
@@ -16263,7 +16408,7 @@ SOFTWARE.
 
 ==============================================================================
 
-rollup@4.53.5
+rollup@4.64.9
 License: MIT
 Source: git+https://github.com/rollup/rollup.git
 
@@ -17088,7 +17233,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ==============================================================================
 
-semver@7.7.3
+semver@7.8.5
 License: ISC
 Source: git+https://github.com/npm/node-semver.git
 
@@ -17202,7 +17347,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-source-map-js@1.2.1
+source-map-js@1.2.2
 License: BSD-3-Clause
 Source: 7rulnik/source-map-js
 
@@ -17561,7 +17706,7 @@ SOFTWARE.
 
 ==============================================================================
 
-tapable@2.3.0
+tapable@2.3.3
 License: MIT
 Source: http://github.com/webpack/tapable.git
 
@@ -17706,7 +17851,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-tinyglobby@0.2.15
+tinyglobby@0.2.17
 License: MIT
 Source: git+https://github.com/SuperchupuDev/tinyglobby.git
 
@@ -17764,7 +17909,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-ts-api-utils@2.1.0
+ts-api-utils@2.5.0
 License: MIT
 Source: https://github.com/JoshuaKGoldberg/ts-api-utils
 
@@ -18172,14 +18317,14 @@ SOFTWARE.
 
 ==============================================================================
 
-update-browserslist-db@1.2.3
+update-browserslist-db@1.3.4
 License: MIT
 Source: browserslist/update-db
 
 --- LICENSE ---
 The MIT License (MIT)
 
-Copyright 2022 Andrey Sitnik <andrey@sitnik.ru> and other contributors
+Copyright 2022 Andrey Sitnik <andrey@sitnik.es> and other contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -18200,7 +18345,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ==============================================================================
 
-uqr@0.1.2
+uqr@0.1.3
 License: MIT
 Source: git+https://github.com/unjs/uqr.git
 
@@ -18249,9 +18394,9 @@ The views and conclusions contained in the software and documentation are those 
 
 ==============================================================================
 
-use-sync-external-store@1.6.0
+use-sync-external-store@1.7.0
 License: MIT
-Source: https://github.com/facebook/react.git
+Source: https://github.com/react/react.git
 
 --- LICENSE ---
 MIT License
@@ -20537,7 +20682,7 @@ THE SOFTWARE.
 
 ==============================================================================
 
-ws@8.18.3
+ws@8.22.0
 License: MIT
 Source: git+https://github.com/websockets/ws.git
 
@@ -20588,7 +20733,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ==============================================================================
 
-yaml@1.10.2
+yaml@1.10.3
 License: ISC
 Source: github:eemeli/yaml
 
@@ -20609,7 +20754,7 @@ THIS SOFTWARE.
 
 ==============================================================================
 
-yaml@2.8.2
+yaml@2.9.1
 License: ISC
 Source: github:eemeli/yaml
 
@@ -20664,7 +20809,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ==============================================================================
 
-zod@4.2.1
+zod@4.6.7
 License: MIT
 Source: git+https://github.com/colinhacks/zod.git
 

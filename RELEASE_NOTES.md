@@ -1,6 +1,8 @@
-# 形见 Xingjian Showroom v0.1.0
+# 形见 Xingjian Showroom v0.1.1
 
-首个公开版本，采用 MIT 协议。
+首个公开版本的跨平台构建修复，采用 MIT 协议。
+
+补全 Rollup、esbuild、Tailwind Oxide 和 Lightning CSS 的平台可选依赖锁，修复 Linux / GitHub Actions 构建。直接依赖版本保持不变。
 
 ## 本次发布
 
@@ -26,7 +28,7 @@ npm run dev
 
 ## 下载
 
-- `xingjian-showroom-v0.1.0-web.zip`：已构建的静态网站，使用任意 HTTP 静态服务器部署。
+- `xingjian-showroom-v0.1.1-web.zip`：已构建的静态网站，使用任意 HTTP 静态服务器部署。
 - `SHA256SUMS.txt`：下载校验值。
 - GitHub 自动提供的 Source code：此版本完整的公开发行源码。
 

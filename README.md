@@ -56,7 +56,7 @@ npm run preview  # 预览 dist/ 中的生产构建
 npm run build -- --base /your-project/
 ```
 
-将 `dist/` 放到静态 HTTP 服务。Release 附件中的 `xingjian-showroom-v0.1.0-web.zip` 是构建好的静态站点；解压后可使用任意静态服务器打开。源码归档由 GitHub 自动提供，附件 `SHA256SUMS.txt` 可用于校验下载。
+将 `dist/` 放到静态 HTTP 服务。Release 附件中的 `xingjian-showroom-v0.1.1-web.zip` 是构建好的静态站点；解压后可使用任意静态服务器打开。源码归档由 GitHub 自动提供，附件 `SHA256SUMS.txt` 可用于校验下载。
 
 ## 扩展模型与客户
 
