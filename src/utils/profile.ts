@@ -1,0 +1,74 @@
+import { supabase } from '../lib/supabase'
+
+export interface UserProfile {
+  id: string
+  email: string | null
+  profile_picture_url: string | null
+  display_name: string | null
+  created_at: string
+  updated_at: string
+}
+
+/**
+ * Fetch user profile from profiles table
+ */
+export async function getUserProfile(userId: string): Promise<UserProfile | null> {
+  if (!supabase) {
+    return null
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .single()
+
+    if (error) {
+      console.error('Error fetching profile:', error)
+      return null
+    }
+
+    return data as UserProfile
+  } catch (error) {
+    console.error('Error fetching profile:', error)
+    return null
+  }
+}
+
+/**
+ * Update user profile
+ */
+export async function updateUserProfile(
+  userId: string,
+  updates: Partial<Pick<UserProfile, 'display_name' | 'profile_picture_url'>>
+): Promise<UserProfile | null> {
+  if (!supabase) {
+    return null
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from('profiles')
+      .update({ ...updates, updated_at: new Date().toISOString() })
+      .eq('id', userId)
+      .select()
+      .single()
+
+    if (error) {
+      console.error('Error updating profile:', error)
+      return null
+    }
+
+    // Update profile store cache immediately
+    import('../stores/useProfileStore').then(({ useProfileStore }) => {
+      useProfileStore.getState().setProfile(data as UserProfile)
+    })
+
+    return data as UserProfile
+  } catch (error) {
+    console.error('Error updating profile:', error)
+    return null
+  }
+}
+

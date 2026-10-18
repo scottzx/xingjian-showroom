@@ -1,0 +1,35 @@
+import { readFileSync, writeFileSync, realpathSync, existsSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshBasicMaterial } from 'three';
+import { createConstructionCad } from '../src/scenarios/construction-cad/createConstructionCad.ts';
+import { auditConstructionCad } from '../src/scenarios/construction-cad/auditConstructionCad.ts';
+const args=process.argv.slice(2); const option=(name,fallback)=>args.includes(name)?args[args.indexOf(name)+1]:fallback;
+const input=option('--input',new URL('../public/models/construction-cad/ifg-classroom/model.json',import.meta.url));
+const output=option('--output',new URL('../public/models/construction-cad/ifg-classroom/building.glb',import.meta.url));
+const reportArg=option('--report');
+if(!reportArg||reportArg.startsWith('--'))throw new Error('Explicit --report inside model/attempt-5 is required');
+const attemptDirectory=realpathSync(fileURLToPath(new URL('../../../artifacts/workflows/construction-real-cad-20261017-02/model/attempt-5/',import.meta.url)));
+const report=path.resolve(reportArg);
+const reportParent=realpathSync(path.dirname(report));
+if(reportParent!==attemptDirectory&&!reportParent.startsWith(attemptDirectory+path.sep))throw new Error('--report must remain inside model/attempt-5');
+if(existsSync(report)){const target=realpathSync(report);if(!target.startsWith(attemptDirectory+path.sep))throw new Error('--report symlink target must remain inside model/attempt-5');}
+const outputPath=output instanceof URL?fileURLToPath(output):path.resolve(output);
+const publicOutput=fileURLToPath(new URL('../public/models/construction-cad/ifg-classroom/building.glb',import.meta.url));
+if(outputPath!==publicOutput||realpathSync(path.dirname(outputPath))!==realpathSync(path.dirname(publicOutput)))throw new Error('Export output must be the authorized current public building.glb');
+if(existsSync(outputPath)&&realpathSync(outputPath)!==publicOutput)throw new Error('Export output may not follow a symlink');
+globalThis.FileReader=class{readAsArrayBuffer(blob){blob.arrayBuffer().then(result=>{this.result=result;this.onloadend?.();},error=>this.onerror?.(error));}};
+const data=JSON.parse(readFileSync(input));
+if(data.revision!=='BLC1-R00/model-attempt5')throw new Error('Export requires BLC1-R00/model-attempt5 revision; build with explicit new attempt output first');
+// Always instantiate a fresh complete export profile; never reuse the live viewer scene.
+const asset=createConstructionCad(data);for(const group of Object.values(asset.levelGroups))group.visible=true;for(const group of asset.cutawayObjects)group.visible=true;
+asset.root.traverse(o=>{if(o.isLine){const old=o.material;o.material=new MeshBasicMaterial({color:old.color});old.dispose();}});
+const before=auditConstructionCad(asset.root,data);if(before.status!=='pass')throw new Error(JSON.stringify(before));
+const bytes=Buffer.from(await new GLTFExporter().parseAsync(asset.root,{binary:true,onlyVisible:false}));writeFileSync(output,bytes);
+const disk=readFileSync(output);const reload=await new GLTFLoader().parseAsync(disk.buffer.slice(disk.byteOffset,disk.byteOffset+disk.byteLength),'');const after=auditConstructionCad(reload.scene,data);
+const headerLength=disk.readUInt32LE(12);const gltf=JSON.parse(disk.subarray(20,20+headerLength).toString());const externalResources=[...(gltf.buffers??[]),...(gltf.images??[])].filter(r=>r.uri);
+const result={revision:data.revision,report,modelInput:String(input),status:after.status==='pass'&&!externalResources.length?'pass':'fail',reloadedWith:'three/GLTFLoader.parseAsync',readBackFromDisk:true,exportProfile:'fresh-complete-independent-two-storeys',onlyVisible:false,externalResources,sizeBytes:disk.length,sha256:createHash('sha256').update(disk).digest('hex'),before,after};
+writeFileSync(report,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));if(result.status!=='pass')process.exitCode=1;

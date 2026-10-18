@@ -1,0 +1,482 @@
+import { create } from 'zustand';
+import { v4 as uuidv4 } from 'uuid';
+import type { Layer, EditorState, ToolType, BrushSettings, BrushStroke } from './editorTypes';
+import { defaultModel } from '../../data/carModels';
+import { imageCache } from '../../utils/imageCache';
+
+interface HistorySnapshot {
+  layers: Layer[];
+  baseColor: string;
+}
+
+// Default brush settings (like Photoshop defaults)
+const defaultBrushSettings: BrushSettings = {
+  size: 20,
+  color: '#000000',
+  hardness: 100,
+  opacity: 100,
+  flow: 100,
+  spacing: 25,      // 25% spacing (Photoshop default)
+  smoothing: 0,     // No smoothing by default
+  blendMode: 'normal',
+};
+
+// Project file format
+export interface ProjectFile {
+  version: string;
+  name: string;
+  createdAt: string;
+  modifiedAt: string;
+  modelId: string;
+  baseColor: string;
+  layers: SerializedLayer[];
+}
+
+// Serialized layer (without HTMLImageElement references)
+export interface SerializedLayer {
+  id: string;
+  type: string;
+  name: string;
+  visible: boolean;
+  locked: boolean;
+  opacity: number;
+  x: number;
+  y: number;
+  rotation: number;
+  scaleX: number;
+  scaleY: number;
+  // Type-specific properties
+  [key: string]: any;
+}
+
+interface EditorStore extends EditorState {
+  history: HistorySnapshot[];
+  historyIndex: number;
+  maxHistorySize: number;
+  isDirty: boolean;  // Track unsaved changes
+  projectName: string;
+  designId: string | null;  // Track if editing existing design from database
+  clipboardLayer: Layer | null;
+  contextMenu: { layerId: string; x: number; y: number } | null;
+  
+  // Actions
+  addLayer: (layer: Omit<Layer, 'id'> | Record<string, any>) => void;
+  updateLayer: (id: string, updates: Partial<Layer> | Record<string, any>) => void;
+  deleteLayer: (id: string) => void;
+  duplicateLayer: (id: string) => void;
+  copyLayer: (id: string) => void;
+  pasteLayer: () => Layer | null;
+  mirrorLayerHorizontal: (id: string) => void;
+  mirrorLayerVertical: (id: string) => void;
+  openLayerContextMenu: (layerId: string, x: number, y: number) => void;
+  closeLayerContextMenu: () => void;
+  reorderLayers: (fromIndex: number, toIndex: number) => void;
+  setSelection: (id: string | null) => void;
+  setBaseColor: (color: string) => void;
+  setTemplateDimensions: (dimensions: { width: number; height: number }) => void;
+  setTemplateImage: (image: HTMLImageElement | null) => void;
+  setCurrentModelId: (modelId: string) => void;
+  // Tool actions
+  setActiveTool: (tool: ToolType) => void;
+  setBrushSettings: (settings: Partial<BrushSettings>) => void;
+  addBrushStroke: (layerId: string, stroke: BrushStroke) => void;
+  // History
+  undo: () => void;
+  redo: () => void;
+  pushHistory: () => void;
+  // Project management
+  clearEditor: () => void;
+  resetProject: () => void;
+  markAsSaved: () => void;
+  setProjectName: (name: string) => void;
+  setDesignId: (id: string | null) => void;
+  getSerializedState: () => ProjectFile;
+  loadProject: (project: ProjectFile) => Promise<void>;
+}
+
+const createHistorySnapshot = (layers: Layer[], baseColor: string): HistorySnapshot => ({
+  layers: layers.map(layer => ({ ...layer })),
+  baseColor,
+});
+
+// Helper to load an image from a data URL (now with caching)
+const loadImageFromSrc = (src: string): Promise<HTMLImageElement> => {
+  return imageCache.get(src);
+};
+
+export const useEditorStore = create<EditorStore>((set, get) => {
+  let historyTimeout: NodeJS.Timeout | null = null;
+  let pendingHistorySnapshot: HistorySnapshot | null = null;
+
+  const pushHistory = () => {
+    const state = get();
+    const snapshot = createHistorySnapshot(state.layers, state.baseColor);
+
+    // Store the snapshot as pending
+    pendingHistorySnapshot = snapshot;
+
+    // Clear any existing timeout
+    if (historyTimeout) {
+      clearTimeout(historyTimeout);
+    }
+
+    // Debounce history push to batch rapid changes
+    historyTimeout = setTimeout(() => {
+      if (!pendingHistorySnapshot) return;
+
+      set((state) => {
+        const newHistory = state.history.slice(0, state.historyIndex + 1);
+        newHistory.push(pendingHistorySnapshot!);
+
+        // Limit history size
+        if (newHistory.length > state.maxHistorySize) {
+          newHistory.shift();
+        } else {
+          state.historyIndex++;
+        }
+
+        pendingHistorySnapshot = null;
+        return {
+          history: newHistory,
+          historyIndex: newHistory.length - 1,
+          isDirty: true,  // Mark as dirty when changes are made
+        };
+      });
+    }, 300); // 300ms debounce for history batching
+  };
+
+  return {
+    layers: [],
+    selectedLayerId: null,
+    baseColor: '#F5F5F0', // Tesla Pearl White Multi-Coat
+    currentModelId: defaultModel.id,
+    templateDimensions: null,
+    templateImage: null,
+    activeTool: 'select' as ToolType,
+    brushSettings: { ...defaultBrushSettings },
+    history: [createHistorySnapshot([], '#F5F5F0')], // Tesla Pearl White Multi-Coat
+    historyIndex: 0,
+    maxHistorySize: 50,
+    isDirty: false,
+    projectName: 'Untitled Project',
+    designId: null,
+    clipboardLayer: null,
+    contextMenu: null,
+
+    addLayer: (layerData) => {
+      const newLayer: Layer = {
+        ...layerData,
+        id: uuidv4(),
+      } as Layer;
+      
+      set((state) => ({
+        layers: [newLayer, ...state.layers],
+        selectedLayerId: newLayer.id,
+      }));
+      
+      pushHistory();
+    },
+
+    updateLayer: (id, updates) => {
+      set((state) => ({
+        layers: state.layers.map((layer) =>
+          layer.id === id ? { ...layer, ...updates } as Layer : layer
+        ),
+      }));
+    },
+
+    deleteLayer: (id) => {
+      set((state) => ({
+        layers: state.layers.filter((layer) => layer.id !== id),
+        selectedLayerId: state.selectedLayerId === id ? null : state.selectedLayerId,
+      }));
+      pushHistory();
+    },
+
+    duplicateLayer: (id) => {
+      const state = get();
+      const layer = state.layers.find((l) => l.id === id);
+      if (!layer) {
+        return;
+      }
+      const duplicated: Layer = {
+        ...layer,
+        id: uuidv4(),
+        name: `${layer.name} Copy`,
+        x: layer.x + 20,
+        y: layer.y + 20,
+      } as Layer;
+
+      set((state) => ({
+        layers: [...state.layers, duplicated],
+        selectedLayerId: duplicated.id,
+      }));
+      pushHistory();
+    },
+
+    copyLayer: (id) => {
+      const state = get();
+      const layer = state.layers.find((l) => l.id === id);
+      if (!layer) return;
+      set({ clipboardLayer: { ...layer } as Layer });
+    },
+
+    pasteLayer: () => {
+      const state = get();
+      const clip = state.clipboardLayer;
+      if (!clip) return null;
+
+      const pasted: Layer = {
+        ...clip,
+        id: uuidv4(),
+        name: `${clip.name || 'Layer'} Copy`,
+        x: (clip.x || 0) + 20,
+        y: (clip.y || 0) + 20,
+      } as Layer;
+
+      set((curr) => {
+        // Find the original layer's position (if it still exists)
+        const originalIndex = curr.layers.findIndex(l => l.id === clip.id);
+        
+        if (originalIndex !== -1) {
+          // Insert the pasted layer above the original in both panel and canvas
+          // Panel shows array in order: index 0 = top of panel
+          // Canvas renders in reverse: index 0 = bottom of canvas, last = top
+          // To place pasted ABOVE original in panel (smaller index), insert at same position
+          // This pushes original down in panel, and down in canvas (which is what we want)
+          const newLayers = [...curr.layers];
+          newLayers.splice(originalIndex, 0, pasted);
+          return {
+            layers: newLayers,
+            selectedLayerId: pasted.id,
+          };
+        } else {
+          // Original layer doesn't exist anymore, add to the top of panel (index 0)
+          return {
+            layers: [pasted, ...curr.layers],
+            selectedLayerId: pasted.id,
+          };
+        }
+      });
+      pushHistory();
+      return pasted;
+    },
+
+    mirrorLayerHorizontal: (id) => {
+      set((state) => ({
+        layers: state.layers.map((layer) =>
+          layer.id === id 
+            ? { ...layer, scaleX: (layer.scaleX || 1) * -1 } as Layer 
+            : layer
+        ),
+      }));
+      pushHistory();
+    },
+
+    mirrorLayerVertical: (id) => {
+      set((state) => ({
+        layers: state.layers.map((layer) =>
+          layer.id === id 
+            ? { ...layer, scaleY: (layer.scaleY || 1) * -1 } as Layer 
+            : layer
+        ),
+      }));
+      pushHistory();
+    },
+
+    openLayerContextMenu: (layerId, x, y) => {
+      set({ contextMenu: { layerId, x, y } });
+    },
+
+    closeLayerContextMenu: () => {
+      set({ contextMenu: null });
+    },
+
+    clearEditor: () => {
+      set({
+        layers: [],
+        selectedLayerId: null,
+        baseColor: '#000000',
+        projectName: '',
+        isDirty: false,
+        designId: null,
+      });
+    },
+
+    reorderLayers: (fromIndex, toIndex) => {
+      set((state) => {
+        const newLayers = [...state.layers];
+        const [moved] = newLayers.splice(fromIndex, 1);
+        newLayers.splice(toIndex, 0, moved);
+        return { layers: newLayers };
+      });
+      pushHistory();
+    },
+
+    setSelection: (id) => {
+      set({ selectedLayerId: id });
+    },
+
+    setBaseColor: (color) => {
+      set({ baseColor: color });
+      pushHistory();
+    },
+
+    setTemplateDimensions: (dimensions) => {
+      set({ templateDimensions: dimensions });
+    },
+
+    setTemplateImage: (image) => {
+      set({ templateImage: image });
+    },
+
+    setCurrentModelId: (modelId) => {
+      set({ currentModelId: modelId });
+    },
+
+    // Tool actions
+    setActiveTool: (tool) => {
+      set({ activeTool: tool });
+    },
+
+    setBrushSettings: (settings) => {
+      set((state) => ({
+        brushSettings: { ...state.brushSettings, ...settings },
+      }));
+    },
+
+    addBrushStroke: (layerId, stroke) => {
+      set((state) => ({
+        layers: state.layers.map((layer) => {
+          if (layer.id === layerId && layer.type === 'brush') {
+            return {
+              ...layer,
+              strokes: [...(layer as any).strokes, stroke],
+            };
+          }
+          return layer;
+        }),
+      }));
+      pushHistory();
+    },
+
+    undo: () => {
+      const state = get();
+      if (state.historyIndex > 0) {
+        const snapshot = state.history[state.historyIndex - 1];
+        set({
+          historyIndex: state.historyIndex - 1,
+          layers: snapshot.layers.map((l) => ({ ...l })),
+          baseColor: snapshot.baseColor,
+        });
+      }
+    },
+
+    redo: () => {
+      const state = get();
+      if (state.historyIndex < state.history.length - 1) {
+        const snapshot = state.history[state.historyIndex + 1];
+        set({
+          historyIndex: state.historyIndex + 1,
+          layers: snapshot.layers.map((l) => ({ ...l })),
+          baseColor: snapshot.baseColor,
+          isDirty: true,
+        });
+      }
+    },
+
+    pushHistory,
+    
+    // Project management
+    resetProject: () => {
+      set({
+        layers: [],
+        selectedLayerId: null,
+        baseColor: '#F5F5F0', // Tesla Pearl White Multi-Coat
+        history: [createHistorySnapshot([], '#F5F5F0')],
+        historyIndex: 0,
+        isDirty: false,
+        projectName: 'Untitled Project',
+        designId: null,
+        activeTool: 'select',
+      });
+    },
+    
+    markAsSaved: () => {
+      set({ isDirty: false });
+    },
+    
+    setProjectName: (name: string) => {
+      set({ projectName: name });
+    },
+    
+    setDesignId: (id: string | null) => {
+      set({ designId: id });
+    },
+    
+    getSerializedState: (): ProjectFile => {
+      const state = get();
+      
+      // Serialize layers, removing HTMLImageElement references
+      const serializedLayers: SerializedLayer[] = state.layers.map(layer => {
+        const { ...rest } = layer as any;
+        // Remove non-serializable properties
+        delete rest.image;
+        delete rest.fillImage;
+        return rest as SerializedLayer;
+      });
+      
+      return {
+        version: '1.0',
+        name: state.projectName,
+        createdAt: new Date().toISOString(),
+        modifiedAt: new Date().toISOString(),
+        modelId: state.currentModelId,
+        baseColor: state.baseColor,
+        layers: serializedLayers,
+      };
+    },
+    
+    loadProject: async (project: ProjectFile) => {
+      // Restore layers with image loading
+      const restoredLayers: Layer[] = await Promise.all(
+        project.layers.map(async (serializedLayer) => {
+          const layer = { ...serializedLayer } as any;
+          
+          // Load images for image/texture layers
+          if ((layer.type === 'image' || layer.type === 'texture') && layer.src) {
+            try {
+              layer.image = await loadImageFromSrc(layer.src);
+            } catch {
+              // Failed to load image
+            }
+          }
+          
+          // Load fill images for fill layers
+          if (layer.type === 'fill' && layer.fillImageDataUrl) {
+            try {
+              layer.fillImage = await loadImageFromSrc(layer.fillImageDataUrl);
+            } catch {
+              // Failed to load fill image
+            }
+          }
+          
+          return layer as Layer;
+        })
+      );
+      
+      set({
+        layers: restoredLayers,
+        selectedLayerId: null,
+        baseColor: project.baseColor,
+        currentModelId: project.modelId,
+        history: [createHistorySnapshot(restoredLayers, project.baseColor)],
+        historyIndex: 0,
+        isDirty: false,
+        projectName: project.name,
+        activeTool: 'select',
+      });
+    },
+  };
+});
+

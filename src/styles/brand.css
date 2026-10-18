@@ -1,0 +1,43 @@
+/* 一芥智能官网配色，来源：offical-website/theme.css 与 pages/DesignSystem.tsx。 */
+:root {
+  --brand-green: #285b4d;
+  --brand-paper: #f7f4eb;
+  --brand-gold: #cbb078;
+  --brand-ink: #202d29;
+  --brand-gold-metal: linear-gradient(115deg, #a78543 0%, #cfb376 26%, #f0deac 48%, #c2a061 72%, #e2ca92 100%);
+  --brand-muted: #59685f;
+  --brand-panel: #fffdf7;
+  --brand-soft: #efeee5;
+  --brand-border: #dcded2;
+  --brand-primary-hover: #1d4439;
+  --brand-accent-soft: #e8eee5;
+  --brand-accent-line: #b9cabb;
+  --brand-gold-ink: #80622e;
+  --brand-gold-soft: #f2ead7;
+  --brand-gold-line: #d8c69e;
+  --brand-on-gold: #14271f;
+  --brand-footer: #eeece2;
+  --brand-glass: #fffdf7d9;
+  --brand-overlay: #102e2670;
+  --brand-shadow: #203d2e0c;
+  --brand-hover-shadow: #203d2e14;
+  --brand-panel-shadow: #3d4a2c1c;
+  --brand-viewer: #eef1ed;
+  /* 旧图案工作台中的三维预览弹窗也使用这组浅色界面变量。 */
+  --showroom-accent: var(--brand-green);
+  --ink: var(--brand-ink);
+  --muted: var(--brand-muted);
+  --line: var(--brand-border);
+}
+
+body:has(.showroom-app) {
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+  color-scheme: light;
+}
+
+.showroom-app::selection,
+.showroom-app ::selection {
+  background: var(--brand-gold);
+  color: var(--brand-ink);
+}
