@@ -1,0 +1,113 @@
+{
+  "source": {
+    "file": "teste_2.dxf",
+    "sha256": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40",
+    "sizeBytes": 25663,
+    "url": "https://raw.githubusercontent.com/jvfpedro/construction-site-optimizer/9c9d90a5ef810f943d533461945decd18bc567e7/output_examples/teste_2.dxf",
+    "repository": "https://github.com/jvfpedro/construction-site-optimizer",
+    "repositoryCommit": "9c9d90a5ef810f943d533461945decd18bc567e7",
+    "repositoryPath": "output_examples/teste_2.dxf",
+    "dxfVersion": "AC1024",
+    "INSUNITS": 6,
+    "declaredUnit": "meters",
+    "unitAdoptedDirectly": false,
+    "titleScale": "1:100",
+    "titleScaleHandle": "3E",
+    "titleScaleAdopted": false,
+    "license": "unknown; local/Tailscale workflow trial only",
+    "sourceManifestHash": "14e82e60a9e4de9cef6063188ba17293ed51f78f8f9d8c9967ef6a647573f8c5",
+    "inputManifestHash": "53bc30f34871da9ea6d0c9d6fb646f1fafb118f3df33eb766414c02d8dd40e0a"
+  },
+  "inputs": [
+    {
+      "path": "acceptance-criteria.json",
+      "sha256": "5a0450763dfb73e447162a7e1f2fc096644c5662d31113e5ccbbc5a46b60be08"
+    },
+    {
+      "path": "find-cad-acceptance.json",
+      "sha256": "5679fc37fc6cd37c717f78dc207a5aaac31b79c788cb236fa109d981f0df55bd"
+    },
+    {
+      "path": "teste_2.dxf",
+      "sha256": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+    },
+    {
+      "path": "source-selection.json",
+      "sha256": "d71393fbbc67cea81c7c7d845ea85aaefd9944b07e4650c03e200eafac32c8d6"
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "14e82e60a9e4de9cef6063188ba17293ed51f78f8f9d8c9967ef6a647573f8c5"
+    },
+    {
+      "path": "teste_2.model.json",
+      "sha256": "8e3f6aad4360df6dbc7a5b3ea6dd30ed3615184bb83c9a5c9dfae1ac096388ac"
+    },
+    {
+      "path": "semantic-mapping.json",
+      "sha256": "308fb7c3aa3dfb3b3d1e8795c4b2f1da0a687373763ee31ee1d6ab43bdbbc751"
+    },
+    {
+      "path": "scale-checks.json",
+      "sha256": "5c93673a9a872c3de9dd42f3ede1277384f954590fe282f2df12f2dee88501e4"
+    },
+    {
+      "path": "adopted-values-and-unknowns.json",
+      "sha256": "e13bf55ef5f87a14fb7470b0500cb7e9da800f5c17f16cbea68c4b5c703f12a7"
+    },
+    {
+      "path": "selected-raw-sheet.png",
+      "sha256": "e9fa6f214926f18a6f7271a05019c3cae4a62b7693a0d24d8fce17067bb0cb88"
+    },
+    {
+      "path": "selected-annotated-plan.png",
+      "sha256": "d304373dc8ccf43a17834a6db507d2d13736eb55f0fc38a04316d2fe532fec03"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "176e9f05eeb4ed2e7e3734985b7b59d89bfa48157f821cec9b3d741931d1f953"
+    },
+    {
+      "path": "modeling.md",
+      "sha256": "a14d07b7b1816c8b2b59d3301ed8e4b260d1c0fc578e1de0f61e5ee6aca47239"
+    }
+  ],
+  "transform": {
+    "category": "manual-mapping",
+    "status": "provisional-for-illustration-only",
+    "originCad": [
+      10,
+      10,
+      0
+    ],
+    "metersPerCadUnit": 0.36363636363636365,
+    "localMetersXY": [
+      "(CAD_X-10)*80/220",
+      "(CAD_Y-10)*80/220"
+    ],
+    "displayCenterOffsetMeters": [
+      -40,
+      0,
+      40
+    ],
+    "world": {
+      "X": "(CAD_X-10)*80/220-40",
+      "Y": "displayHeight only; actual elevation unknown",
+      "Z": "40-(CAD_Y-10)*80/220"
+    },
+    "inverse": {
+      "CAD_X": "(worldX+40)/(80/220)+10",
+      "CAD_Y": "(40-worldZ)/(80/220)+10"
+    },
+    "cadPlane": "XY",
+    "worldPlane": "XZ",
+    "upAxis": "Y",
+    "units": "m",
+    "verticalDatum": null,
+    "northDirection": null,
+    "flatDisplayElevation": 0,
+    "flatDisplayElevationBasis": "illustration",
+    "independentDimensionControls": 0,
+    "independentDimensionVerification": false
+  }
+}

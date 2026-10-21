@@ -8,7 +8,7 @@ import { createPackaging } from '../src/scenarios/packaging/createPackaging.ts';
 
 test('all configured clients, products and defaults reference valid catalog entries', () => {
   assert.doesNotThrow(validateCatalog);
-  assert.deepEqual(new Set(products.map(product => product.industry)), new Set(['interior', 'vehicle-wrap', 'packaging']));
+  assert.deepEqual(new Set(products.map(product => product.industry)), new Set(['interior', 'vehicle-wrap', 'packaging', 'construction-site']));
   for (const client of clients) for (const id of client.productIds) assert.ok(getShowcase(client.id, id));
 });
 

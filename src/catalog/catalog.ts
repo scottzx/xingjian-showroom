@@ -1,4 +1,5 @@
 import type { ClientDefinition, Finish, IndustryId, ProductDefinition } from './types.ts';
+import { publicAssetUrl } from '../utils/publicAssetUrl.ts';
 
 export const finishes: Finish[] = [
   { id: 'oak', name: '浅橡木', detail: '自然木纹 · 温润质感', color: '#c4a47a', roughness: .78, metalness: 0, pattern: 'wood' },
@@ -23,11 +24,11 @@ export const finishes: Finish[] = [
 const filmIds = ['film-green', 'film-blue', 'film-silver', 'film-orange', 'film-black'];
 const plasticIds = ['plastic-cream', 'plastic-green', 'plastic-blue', 'charcoal'];
 
-const productDefinitions: ProductDefinition[] = [
+export const products: ProductDefinition[] = [
   {
     id: 'c108', industry: 'interior', name: 'C 户型 · 108 方', subtitle: '真实 CAD 户型 / 材质搭配 / 水电核对',
     description: '依据三份施工图展示空间方案，支持原图、水电图层与材质配置核对。',
-    model: { kind: 'cad', url: '/models/c108/apartment.json' }, demo: false,
+    model: { kind: 'cad', url: publicAssetUrl('/models/c108/apartment.json') }, demo: false,
     camera: { position: [13, 16, 16], target: [0, .5, 0], minDistance: 5, maxDistance: 65 },
     features: { cutaway: true },
     surfaces: [
@@ -80,7 +81,7 @@ const productDefinitions: ProductDefinition[] = [
   {
     id: 'construction-site', industry: 'construction-site', name: '施工场地 · 教学样例', subtitle: '六设施足迹 / 比例暂定 / 高度示意',
     description: '依据教学 CAD 的边界与六设施足迹展示布局。80×80 米为暂定比例，实际高度全部未知。',
-    model: { kind: 'construction-site', url: '/models/construction-site/site.json' }, demo: true,
+    model: { kind: 'construction-site', url: publicAssetUrl('/models/construction-site/site.json') }, demo: true,
     camera: { position: [105, 115, 125], target: [0, 0, 0], minDistance: 12, maxDistance: 600 },
     features: {},
     surfaces: [
@@ -95,7 +96,7 @@ const productDefinitions: ProductDefinition[] = [
   {
     id: 'ifg-classroom', industry: 'construction-site', name: 'IFG · BLC1 两层教学楼', subtitle: '真实设计 CAD / 两层主体 / 来源核对',
     description: '由 IFG BLC1 R00 原始设计重建两层建筑主体，核对墙体、门窗开口、地面与中庭。',
-    model: { kind: 'construction-cad', url: '/models/construction-cad/ifg-classroom/model.json' }, demo: false,
+    model: { kind: 'construction-cad', url: publicAssetUrl('/models/construction-cad/ifg-classroom/model.json') }, demo: false,
     camera: { position: [82, 75, 70], target: [32.5, 2.5, -10.5], minDistance: 8, maxDistance: 800 },
     features: { cutaway: true },
     surfaces: [
@@ -107,26 +108,19 @@ const productDefinitions: ProductDefinition[] = [
   },
 ];
 
-// Public demos use original procedural assets; CAD adapters and examples remain in source.
-export const products = productDefinitions.filter(product => product.model.kind === 'procedural');
-
-const clientDefinitions: ClientDefinition[] = [
+export const clients: ClientDefinition[] = [
   { id: 'construction-demo', name: '建筑空间展示', initials: '建', tagline: '设计依据 · 空间沟通', accent: 'var(--brand-green)', productIds: ['construction-site', 'ifg-classroom'] },
   { id: 'interior-demo', name: '栖居空间', initials: '栖', tagline: '室内空间方案演示', accent: 'var(--brand-green)', productIds: ['c108', 'living-room'] },
   { id: 'wrap-demo', name: '流线车衣 · 演示客户', initials: '流', tagline: '车身膜材配置演示', accent: 'var(--brand-green)', productIds: ['sedan'] },
   { id: 'packaging-demo', name: '本色包装 · 演示客户', initials: '本', tagline: '包装外观方案演示', accent: 'var(--brand-green)', productIds: ['film-bucket'] },
 ];
 
-export const clients = clientDefinitions.map(client => ({ ...client, productIds: client.productIds.filter(id => products.some(product => product.id === id)) })).filter(client => client.productIds.length > 0);
-
-const industryDefinitions: { id: IndustryId; name: string; english: string; description: string; clientId: string; productId: string }[] = [
+export const industries: { id: IndustryId; name: string; english: string; description: string; clientId: string; productId: string }[] = [
   { id: 'interior', name: '室内装修', english: 'INTERIOR', description: '依据 CAD 图纸展示空间、材质与水电信息。', clientId: 'interior-demo', productId: 'c108' },
   { id: 'vehicle-wrap', name: '车衣定制', english: 'VEHICLE WRAP', description: '按车身部件配置膜材，核对整车配色。', clientId: 'wrap-demo', productId: 'sedan' },
   { id: 'packaging', name: '塑膜桶', english: 'PACKAGING', description: '配置包装颜色与品牌标签，展示外观方案。', clientId: 'packaging-demo', productId: 'film-bucket' },
   { id: 'construction-site', name: '建筑工程', english: 'CONSTRUCTION CAD', description: '依据真实设计 CAD 核对两层建筑、门窗与图纸来源。', clientId: 'construction-demo', productId: 'ifg-classroom' },
 ];
-
-export const industries = industryDefinitions.filter(industry => clients.some(client => client.id === industry.clientId)).map(industry => industry.id === 'interior' ? { ...industry, productId: 'living-room', description: '按区域配置空间、地板、墙面与家具材质。' } : industry);
 
 export function getShowcase(clientId: string, productId: string) {
   const client = clients.find(item => item.id === clientId);

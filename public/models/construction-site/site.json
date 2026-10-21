@@ -1,0 +1,971 @@
+{
+  "schemaVersion": 1,
+  "id": "construction-site",
+  "version": "construction-site-20261017-01-model-attempt-1",
+  "title": "施工场地 · 教学样例",
+  "scope": "仅准入教学施工场地平面布局到示意三维的流程试验；非完整工地/实测/签发施工模型。",
+  "source": {
+    "file": "teste_2.dxf",
+    "sha256": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40",
+    "sizeBytes": 25663,
+    "url": "https://raw.githubusercontent.com/jvfpedro/construction-site-optimizer/9c9d90a5ef810f943d533461945decd18bc567e7/output_examples/teste_2.dxf",
+    "repository": "https://github.com/jvfpedro/construction-site-optimizer",
+    "repositoryCommit": "9c9d90a5ef810f943d533461945decd18bc567e7",
+    "repositoryPath": "output_examples/teste_2.dxf",
+    "dxfVersion": "AC1024",
+    "INSUNITS": 6,
+    "declaredUnit": "meters",
+    "unitAdoptedDirectly": false,
+    "titleScale": "1:100",
+    "titleScaleHandle": "3E",
+    "titleScaleAdopted": false,
+    "license": "unknown; local/Tailscale workflow trial only",
+    "sourceManifestHash": "14e82e60a9e4de9cef6063188ba17293ed51f78f8f9d8c9967ef6a647573f8c5",
+    "inputManifestHash": "53bc30f34871da9ea6d0c9d6fb646f1fafb118f3df33eb766414c02d8dd40e0a"
+  },
+  "warnings": [
+    "教学样例",
+    "比例暂定：80×80 m，0 处独立尺寸控制",
+    "高度示意：实际高度全部未知",
+    "INSUNITS=6 / 图签1:100 / 作者输入存在冲突"
+  ],
+  "transform": {
+    "category": "manual-mapping",
+    "status": "provisional-for-illustration-only",
+    "originCad": [
+      10,
+      10,
+      0
+    ],
+    "metersPerCadUnit": 0.36363636363636365,
+    "localMetersXY": [
+      "(CAD_X-10)*80/220",
+      "(CAD_Y-10)*80/220"
+    ],
+    "displayCenterOffsetMeters": [
+      -40,
+      0,
+      40
+    ],
+    "world": {
+      "X": "(CAD_X-10)*80/220-40",
+      "Y": "displayHeight only; actual elevation unknown",
+      "Z": "40-(CAD_Y-10)*80/220"
+    },
+    "inverse": {
+      "CAD_X": "(worldX+40)/(80/220)+10",
+      "CAD_Y": "(40-worldZ)/(80/220)+10"
+    },
+    "cadPlane": "XY",
+    "worldPlane": "XZ",
+    "upAxis": "Y",
+    "units": "m",
+    "verticalDatum": null,
+    "northDirection": null,
+    "flatDisplayElevation": 0,
+    "flatDisplayElevationBasis": "illustration",
+    "independentDimensionControls": 0,
+    "independentDimensionVerification": false
+  },
+  "scaleConflicts": [
+    "Site boundary handle 41 is 220 x 220 CAD units, while paired input_examples.txt specifies teste_2 as 80 x 80 (interpreted meters using source README and area texts).",
+    "Title text handle 3E is 1:100, but the static source code writes 1:100 while dynamically scaling to sheet width. That title is not a reliable scale.",
+    "Header EXTMIN/EXTMAX are uninitialized sentinel values; actual extents were computed from entities."
+  ],
+  "site": {
+    "sourceHandle": "41",
+    "cadPoints": [
+      [
+        10.0,
+        10.0,
+        0.0
+      ],
+      [
+        230.0,
+        10.0,
+        0.0
+      ],
+      [
+        230.0,
+        230.0,
+        0.0
+      ],
+      [
+        10.0,
+        230.0,
+        0.0
+      ],
+      [
+        10.0,
+        10.0,
+        0.0
+      ]
+    ],
+    "localMetersPoints": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        80.0,
+        0.0
+      ],
+      [
+        80.0,
+        80.0
+      ],
+      [
+        0.0,
+        80.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "worldPoints": [
+      [
+        -40.0,
+        0.0,
+        40.0
+      ],
+      [
+        40.0,
+        0.0,
+        40.0
+      ],
+      [
+        40.0,
+        0.0,
+        -40.0
+      ],
+      [
+        -40.0,
+        0.0,
+        -40.0
+      ],
+      [
+        -40.0,
+        0.0,
+        40.0
+      ]
+    ],
+    "adoptedDimensionsMeters": [
+      80,
+      80
+    ],
+    "actualElevation": null,
+    "heightKnown": false,
+    "geometryBasis": "geometry",
+    "scaleStatus": "provisional-for-illustration-only"
+  },
+  "facilities": [
+    {
+      "id": "F01",
+      "nameZh": "一般储料区",
+      "nameOriginal": "Deposito",
+      "nameEn": "Storage",
+      "source": {
+        "file": "source/teste_2.dxf",
+        "layout": "Model",
+        "layer": "Canteiro",
+        "footprintHandle": "42",
+        "nameTextHandle": "43",
+        "areaTextHandle": "44",
+        "sourceHash": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+      },
+      "cadPoints": [
+        [
+          27.79232152924655,
+          187.2518964401979,
+          0.0
+        ],
+        [
+          55.29232152924656,
+          187.2518964401979,
+          0.0
+        ],
+        [
+          55.29232152924656,
+          214.7518964401979,
+          0.0
+        ],
+        [
+          27.79232152924655,
+          214.7518964401979,
+          0.0
+        ],
+        [
+          27.79232152924655,
+          187.2518964401979,
+          0.0
+        ]
+      ],
+      "localMetersPoints": [
+        [
+          6.4699351015442,
+          64.45523506916287
+        ],
+        [
+          16.469935101544202,
+          64.45523506916287
+        ],
+        [
+          16.469935101544202,
+          74.45523506916287
+        ],
+        [
+          6.4699351015442,
+          74.45523506916287
+        ],
+        [
+          6.4699351015442,
+          64.45523506916287
+        ]
+      ],
+      "worldPoints": [
+        [
+          -33.5300648984558,
+          0.0,
+          -24.455235069162867
+        ],
+        [
+          -23.530064898455798,
+          0.0,
+          -24.455235069162867
+        ],
+        [
+          -23.530064898455798,
+          0.0,
+          -34.45523506916287
+        ],
+        [
+          -33.5300648984558,
+          0.0,
+          -34.45523506916287
+        ],
+        [
+          -33.5300648984558,
+          0.0,
+          -24.455235069162867
+        ]
+      ],
+      "adoptedDimensionsMeters": {
+        "width": 10.000000000000002,
+        "depth": 10.0,
+        "area": 100.00000000000001
+      },
+      "sourceAreaText": "100 m2",
+      "geometryBasis": "geometry",
+      "semanticBasis": "manual-mapping",
+      "scaleStatus": "provisional-for-illustration-only",
+      "dimensionVerified": false,
+      "actualHeight": null,
+      "heightKnown": false,
+      "heightBasis": "illustration",
+      "actualHeightBasis": "unresolved",
+      "displayHeight": 2.8,
+      "representation": "generic-mass",
+      "displayHeightNote": "仅用于区分位置的示意体块/区域厚度，不代表实际高度或设备参数",
+      "displayColor": "#819caf",
+      "materialBasis": "illustration",
+      "actualElevation": null,
+      "terrainKnown": false,
+      "buildingOrOpenZone": null,
+      "siteVerified": false,
+      "unknowns": [
+        "实际高度与层数",
+        "建筑/开放区域类型",
+        "屋面门窗与构造",
+        "设备型号与性能",
+        "地形标高与基准",
+        "材料和颜色"
+      ]
+    },
+    {
+      "id": "F02",
+      "nameZh": "升降设施占位",
+      "nameOriginal": "Elevador",
+      "nameEn": "Lift zone",
+      "source": {
+        "file": "source/teste_2.dxf",
+        "layout": "Model",
+        "layer": "Canteiro",
+        "footprintHandle": "45",
+        "nameTextHandle": "46",
+        "areaTextHandle": "47",
+        "sourceHash": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+      },
+      "cadPoints": [
+        [
+          174.04066809873382,
+          17.62251445775148,
+          0.0
+        ],
+        [
+          182.29066809873382,
+          17.62251445775148,
+          0.0
+        ],
+        [
+          182.29066809873382,
+          25.87251445775148,
+          0.0
+        ],
+        [
+          174.04066809873382,
+          25.87251445775148,
+          0.0
+        ],
+        [
+          174.04066809873382,
+          17.62251445775148,
+          0.0
+        ]
+      ],
+      "localMetersPoints": [
+        [
+          59.65115203590321,
+          2.7718234391823557
+        ],
+        [
+          62.65115203590321,
+          2.7718234391823557
+        ],
+        [
+          62.65115203590321,
+          5.771823439182356
+        ],
+        [
+          59.65115203590321,
+          5.771823439182356
+        ],
+        [
+          59.65115203590321,
+          2.7718234391823557
+        ]
+      ],
+      "worldPoints": [
+        [
+          19.65115203590321,
+          0.0,
+          37.228176560817644
+        ],
+        [
+          22.65115203590321,
+          0.0,
+          37.228176560817644
+        ],
+        [
+          22.65115203590321,
+          0.0,
+          34.228176560817644
+        ],
+        [
+          19.65115203590321,
+          0.0,
+          34.228176560817644
+        ],
+        [
+          19.65115203590321,
+          0.0,
+          37.228176560817644
+        ]
+      ],
+      "adoptedDimensionsMeters": {
+        "width": 3.0,
+        "depth": 3.0,
+        "area": 9.0
+      },
+      "sourceAreaText": "9 m2",
+      "geometryBasis": "geometry",
+      "semanticBasis": "manual-mapping",
+      "scaleStatus": "provisional-for-illustration-only",
+      "dimensionVerified": false,
+      "actualHeight": null,
+      "heightKnown": false,
+      "heightBasis": "illustration",
+      "actualHeightBasis": "unresolved",
+      "displayHeight": 2.8,
+      "representation": "generic-mass",
+      "displayHeightNote": "仅用于区分位置的示意体块/区域厚度，不代表实际高度或设备参数",
+      "displayColor": "#9991b5",
+      "materialBasis": "illustration",
+      "actualElevation": null,
+      "terrainKnown": false,
+      "buildingOrOpenZone": null,
+      "siteVerified": false,
+      "unknowns": [
+        "实际高度与层数",
+        "建筑/开放区域类型",
+        "屋面门窗与构造",
+        "设备型号与性能",
+        "地形标高与基准",
+        "材料和颜色"
+      ]
+    },
+    {
+      "id": "F03",
+      "nameZh": "卫生间",
+      "nameOriginal": "Banheiro",
+      "nameEn": "Toilets",
+      "source": {
+        "file": "source/teste_2.dxf",
+        "layout": "Model",
+        "layer": "Canteiro",
+        "footprintHandle": "48",
+        "nameTextHandle": "49",
+        "areaTextHandle": "4A",
+        "sourceHash": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+      },
+      "cadPoints": [
+        [
+          131.82383185172478,
+          129.57016412337782,
+          0.0
+        ],
+        [
+          145.29883185172474,
+          129.57016412337782,
+          0.0
+        ],
+        [
+          145.29883185172474,
+          136.30766412337783,
+          0.0
+        ],
+        [
+          131.82383185172478,
+          136.30766412337783,
+          0.0
+        ],
+        [
+          131.82383185172478,
+          129.57016412337782,
+          0.0
+        ]
+      ],
+      "localMetersPoints": [
+        [
+          44.29957521880901,
+          43.4800596812283
+        ],
+        [
+          49.199575218808995,
+          43.4800596812283
+        ],
+        [
+          49.199575218808995,
+          45.93005968122831
+        ],
+        [
+          44.29957521880901,
+          45.93005968122831
+        ],
+        [
+          44.29957521880901,
+          43.4800596812283
+        ]
+      ],
+      "worldPoints": [
+        [
+          4.299575218809011,
+          0.0,
+          -3.4800596812282976
+        ],
+        [
+          9.199575218808995,
+          0.0,
+          -3.4800596812282976
+        ],
+        [
+          9.199575218808995,
+          0.0,
+          -5.9300596812283075
+        ],
+        [
+          4.299575218809011,
+          0.0,
+          -5.9300596812283075
+        ],
+        [
+          4.299575218809011,
+          0.0,
+          -3.4800596812282976
+        ]
+      ],
+      "adoptedDimensionsMeters": {
+        "width": 4.899999999999984,
+        "depth": 2.45000000000001,
+        "area": 12.00500000000001
+      },
+      "sourceAreaText": "12.005000000000003 m2",
+      "geometryBasis": "geometry",
+      "semanticBasis": "manual-mapping",
+      "scaleStatus": "provisional-for-illustration-only",
+      "dimensionVerified": false,
+      "actualHeight": null,
+      "heightKnown": false,
+      "heightBasis": "illustration",
+      "actualHeightBasis": "unresolved",
+      "displayHeight": 2.8,
+      "representation": "generic-mass",
+      "displayHeightNote": "仅用于区分位置的示意体块/区域厚度，不代表实际高度或设备参数",
+      "displayColor": "#7ea7a5",
+      "materialBasis": "illustration",
+      "actualElevation": null,
+      "terrainKnown": false,
+      "buildingOrOpenZone": null,
+      "siteVerified": false,
+      "unknowns": [
+        "实际高度与层数",
+        "建筑/开放区域类型",
+        "屋面门窗与构造",
+        "设备型号与性能",
+        "地形标高与基准",
+        "材料和颜色"
+      ]
+    },
+    {
+      "id": "F04",
+      "nameZh": "食堂",
+      "nameOriginal": "Refeitorio",
+      "nameEn": "Dining",
+      "source": {
+        "file": "source/teste_2.dxf",
+        "layout": "Model",
+        "layer": "Canteiro",
+        "footprintHandle": "4B",
+        "nameTextHandle": "4C",
+        "areaTextHandle": "4D",
+        "sourceHash": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+      },
+      "cadPoints": [
+        [
+          71.56781601302876,
+          152.59457375084077,
+          0.0
+        ],
+        [
+          99.06781601302876,
+          152.59457375084077,
+          0.0
+        ],
+        [
+          99.06781601302876,
+          160.84457375084077,
+          0.0
+        ],
+        [
+          71.56781601302876,
+          160.84457375084077,
+          0.0
+        ],
+        [
+          71.56781601302876,
+          152.59457375084077,
+          0.0
+        ]
+      ],
+      "localMetersPoints": [
+        [
+          22.38829673201046,
+          51.852572273033005
+        ],
+        [
+          32.38829673201046,
+          51.852572273033005
+        ],
+        [
+          32.38829673201046,
+          54.852572273033005
+        ],
+        [
+          22.38829673201046,
+          54.852572273033005
+        ],
+        [
+          22.38829673201046,
+          51.852572273033005
+        ]
+      ],
+      "worldPoints": [
+        [
+          -17.61170326798954,
+          0.0,
+          -11.852572273033005
+        ],
+        [
+          -7.61170326798954,
+          0.0,
+          -11.852572273033005
+        ],
+        [
+          -7.61170326798954,
+          0.0,
+          -14.852572273033005
+        ],
+        [
+          -17.61170326798954,
+          0.0,
+          -14.852572273033005
+        ],
+        [
+          -17.61170326798954,
+          0.0,
+          -11.852572273033005
+        ]
+      ],
+      "adoptedDimensionsMeters": {
+        "width": 10.0,
+        "depth": 3.0,
+        "area": 30.0
+      },
+      "sourceAreaText": "30.0 m2",
+      "geometryBasis": "geometry",
+      "semanticBasis": "manual-mapping",
+      "scaleStatus": "provisional-for-illustration-only",
+      "dimensionVerified": false,
+      "actualHeight": null,
+      "heightKnown": false,
+      "heightBasis": "illustration",
+      "actualHeightBasis": "unresolved",
+      "displayHeight": 2.8,
+      "representation": "generic-mass",
+      "displayHeightNote": "仅用于区分位置的示意体块/区域厚度，不代表实际高度或设备参数",
+      "displayColor": "#c3a573",
+      "materialBasis": "illustration",
+      "actualElevation": null,
+      "terrainKnown": false,
+      "buildingOrOpenZone": null,
+      "siteVerified": false,
+      "unknowns": [
+        "实际高度与层数",
+        "建筑/开放区域类型",
+        "屋面门窗与构造",
+        "设备型号与性能",
+        "地形标高与基准",
+        "材料和颜色"
+      ]
+    },
+    {
+      "id": "F05",
+      "nameZh": "库房/仓储区",
+      "nameOriginal": "Almoxarifado",
+      "nameEn": "Storeroom",
+      "source": {
+        "file": "source/teste_2.dxf",
+        "layout": "Model",
+        "layer": "Canteiro",
+        "footprintHandle": "4E",
+        "nameTextHandle": "4F",
+        "areaTextHandle": "50",
+        "sourceHash": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+      },
+      "cadPoints": [
+        [
+          40.14678286489581,
+          153.62529730833896,
+          0.0
+        ],
+        [
+          67.64678286489581,
+          153.62529730833896,
+          0.0
+        ],
+        [
+          67.64678286489581,
+          181.12529730833896,
+          0.0
+        ],
+        [
+          40.14678286489581,
+          181.12529730833896,
+          0.0
+        ],
+        [
+          40.14678286489581,
+          153.62529730833896,
+          0.0
+        ]
+      ],
+      "localMetersPoints": [
+        [
+          10.96246649632575,
+          52.227380839395984
+        ],
+        [
+          20.96246649632575,
+          52.227380839395984
+        ],
+        [
+          20.96246649632575,
+          62.227380839395984
+        ],
+        [
+          10.96246649632575,
+          62.227380839395984
+        ],
+        [
+          10.96246649632575,
+          52.227380839395984
+        ]
+      ],
+      "worldPoints": [
+        [
+          -29.03753350367425,
+          0.0,
+          -12.227380839395984
+        ],
+        [
+          -19.03753350367425,
+          0.0,
+          -12.227380839395984
+        ],
+        [
+          -19.03753350367425,
+          0.0,
+          -22.227380839395984
+        ],
+        [
+          -29.03753350367425,
+          0.0,
+          -22.227380839395984
+        ],
+        [
+          -29.03753350367425,
+          0.0,
+          -12.227380839395984
+        ]
+      ],
+      "adoptedDimensionsMeters": {
+        "width": 10.0,
+        "depth": 10.0,
+        "area": 100.0
+      },
+      "sourceAreaText": "100 m2",
+      "geometryBasis": "geometry",
+      "semanticBasis": "manual-mapping",
+      "scaleStatus": "provisional-for-illustration-only",
+      "dimensionVerified": false,
+      "actualHeight": null,
+      "heightKnown": false,
+      "heightBasis": "illustration",
+      "actualHeightBasis": "unresolved",
+      "displayHeight": 2.8,
+      "representation": "generic-mass",
+      "displayHeightNote": "仅用于区分位置的示意体块/区域厚度，不代表实际高度或设备参数",
+      "displayColor": "#91a58b",
+      "materialBasis": "illustration",
+      "actualElevation": null,
+      "terrainKnown": false,
+      "buildingOrOpenZone": null,
+      "siteVerified": false,
+      "unknowns": [
+        "实际高度与层数",
+        "建筑/开放区域类型",
+        "屋面门窗与构造",
+        "设备型号与性能",
+        "地形标高与基准",
+        "材料和颜色"
+      ]
+    },
+    {
+      "id": "F06",
+      "nameZh": "饮水点",
+      "nameOriginal": "Bebedouro",
+      "nameEn": "Drinking water",
+      "source": {
+        "file": "source/teste_2.dxf",
+        "layout": "Model",
+        "layer": "Canteiro",
+        "footprintHandle": "51",
+        "nameTextHandle": "52",
+        "areaTextHandle": "53",
+        "sourceHash": "70fe649f14c8891a2d7f961c6b867b467c01809fbe0e2fd0664fb3c977b91a40"
+      },
+      "cadPoints": [
+        [
+          110.07633956320109,
+          95.02294328846372,
+          0.0
+        ],
+        [
+          115.57633956320109,
+          95.02294328846372,
+          0.0
+        ],
+        [
+          115.57633956320109,
+          97.77294328846372,
+          0.0
+        ],
+        [
+          110.07633956320109,
+          97.77294328846372,
+          0.0
+        ],
+        [
+          110.07633956320109,
+          95.02294328846372,
+          0.0
+        ]
+      ],
+      "localMetersPoints": [
+        [
+          36.391396204800394,
+          30.917433923077716
+        ],
+        [
+          38.391396204800394,
+          30.917433923077716
+        ],
+        [
+          38.391396204800394,
+          31.917433923077716
+        ],
+        [
+          36.391396204800394,
+          31.917433923077716
+        ],
+        [
+          36.391396204800394,
+          30.917433923077716
+        ]
+      ],
+      "worldPoints": [
+        [
+          -3.608603795199606,
+          0.0,
+          9.082566076922284
+        ],
+        [
+          -1.6086037951996062,
+          0.0,
+          9.082566076922284
+        ],
+        [
+          -1.6086037951996062,
+          0.0,
+          8.082566076922284
+        ],
+        [
+          -3.608603795199606,
+          0.0,
+          8.082566076922284
+        ],
+        [
+          -3.608603795199606,
+          0.0,
+          9.082566076922284
+        ]
+      ],
+      "adoptedDimensionsMeters": {
+        "width": 2.0,
+        "depth": 1.0,
+        "area": 2.0
+      },
+      "sourceAreaText": "2 m2",
+      "geometryBasis": "geometry",
+      "semanticBasis": "manual-mapping",
+      "scaleStatus": "provisional-for-illustration-only",
+      "dimensionVerified": false,
+      "actualHeight": null,
+      "heightKnown": false,
+      "heightBasis": "illustration",
+      "actualHeightBasis": "unresolved",
+      "displayHeight": 0.12,
+      "representation": "flat-zone",
+      "displayHeightNote": "仅用于区分位置的示意体块/区域厚度，不代表实际高度或设备参数",
+      "displayColor": "#bb8e98",
+      "materialBasis": "illustration",
+      "actualElevation": null,
+      "terrainKnown": false,
+      "buildingOrOpenZone": null,
+      "siteVerified": false,
+      "unknowns": [
+        "实际高度与层数",
+        "建筑/开放区域类型",
+        "屋面门窗与构造",
+        "设备型号与性能",
+        "地形标高与基准",
+        "材料和颜色"
+      ]
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "U01",
+      "field": "independent metric scale",
+      "status": "unverified",
+      "restriction": "80 x 80 m is provisional author-input interpretation, not independently confirmed."
+    },
+    {
+      "id": "U02",
+      "field": "actual heights, stories, roof, doors, equipment details",
+      "status": "unknown",
+      "restriction": "Use flat pads or explicitly labelled generic masses only."
+    },
+    {
+      "id": "U03",
+      "field": "terrain, elevations, coordinates, north and survey datum",
+      "status": "unknown",
+      "restriction": "Flat display plane and orientation may only be illustrative."
+    },
+    {
+      "id": "U04",
+      "field": "construction schedule and sequence",
+      "status": "unknown",
+      "restriction": "No 4D schedule or factual build sequence."
+    },
+    {
+      "id": "U05",
+      "field": "roads, entrances, utilities, fire and logistics clearances",
+      "status": "absent",
+      "restriction": "Do not infer operational circulation or compliance from empty space."
+    },
+    {
+      "id": "U06",
+      "field": "license and commercial reuse rights",
+      "status": "unknown",
+      "restriction": "Publicly downloadable does not establish commercial or redistribution permission; no LICENSE in pinned repository tree."
+    },
+    {
+      "id": "U07",
+      "field": "real project and as-built status",
+      "status": "not-supported",
+      "restriction": "Label UFSC course generated example, not surveyed site or issued construction plan."
+    },
+    {
+      "id": "U08",
+      "field": "main permanent building / material inventory",
+      "status": "absent",
+      "restriction": "Six temporary-facility/zone footprints only; cannot claim complete construction-site plan."
+    }
+  ],
+  "excludedLayers": [
+    {
+      "layer": "Prancha",
+      "reason": "sheet frame"
+    },
+    {
+      "layer": "Legenda",
+      "reason": "title block, including misleading fixed scale text"
+    }
+  ],
+  "notModeled": [
+    "永久主楼",
+    "道路与出入口",
+    "塔吊",
+    "地下管线",
+    "地形",
+    "工序与进度"
+  ],
+  "evidence": {
+    "geometry": "direct DXF read and checked against admitted semantic mapping",
+    "semanticMappingHash": "308fb7c3aa3dfb3b3d1e8795c4b2f1da0a687373763ee31ee1d6ab43bdbbc751",
+    "scaleChecksHash": "5c93673a9a872c3de9dd42f3ede1277384f954590fe282f2df12f2dee88501e4",
+    "independentDimensionVerification": false,
+    "siteVerified": false
+  }
+}

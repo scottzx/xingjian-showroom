@@ -17,13 +17,13 @@ src/
 
 此仓库是本地工作项目的公开发行快照，保留应用源码并将原来的私有应用子模块展开为普通目录。源码历史从此公开快照开始；私有工作区的 Git 历史、凭据、支付图片和运行记录没有上传。
 
-公开演示只启用 `model.kind === 'procedural'` 的商品。目录中保留 CAD 接入配置示例和对应适配器，真实 CAD 数据、源图截图、派生 JSON/GLB 及依赖这些材料的集成验收用例没有随包分发。公开测试覆盖现有示意模型、分享/存储逻辑及与外部图纸无关的几何核对逻辑；不代表对未分发工程数据完成验收。
+公开目录启用当前全部六个商品，首页逐个列出。三个程序化示例和三个 CAD 派生示例共用注册表与渲染器。`public/models/` 收录经维护者确认公开的派生 JSON/GLB、SVG 平面、C108 对照图及说明；原始 DWG/DXF 不分发。模型素材来源与限制见 [model-assets.md](model-assets.md)。公开测试检查六场景目录、模型包完整性、分享/存储、CAD 渲染与关键几何；不代表工程图纸完整性认证。
 
 ## 接入自己的模型
 
 GLB 商品通过 `src/scenarios/registry.ts` 加载，可按节点名或 `userData.surfaceId` 将网格映射到可配置区域。所有物理量统一使用米，并设置适当的相机范围。
 
-CAD 适配器的数据结构见 `src/scenarios/interior/cadTypes.ts`、`src/scenarios/construction-site/types.ts`、`src/scenarios/construction-cad/types.ts`。取得明确使用权限并准备数据后，在商品目录中添加自己的产品和客户，并调整公开目录筛选逻辑。部署到子目录时，外部模型 URL 需要包含 `import.meta.env.BASE_URL` 或使用完整的已授权资源地址。
+CAD 适配器的数据结构见 `src/scenarios/interior/cadTypes.ts`、`src/scenarios/construction-site/types.ts`、`src/scenarios/construction-cad/types.ts`。取得明确使用权限并准备数据后，在商品目录中添加自己的产品和客户，即可接入。模型 URL 与静态下载链接统一使用 `publicAssetUrl`，该函数读取 `import.meta.env.BASE_URL`，兼容网站根目录、GitHub Pages 子目录及可搬移静态包。
 
 图纸坐标、楼层、开口、单位及竖向依据需要独立核验；示意材质不能证明模型尺寸正确。未知标高、埋深、管线走向及施工变化要保留未知状态，模型不提供可钻孔结论。
 

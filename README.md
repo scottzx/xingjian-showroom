@@ -16,14 +16,16 @@
 
 | 场景 | 交互能力 |
 | --- | --- |
-| 室内空间 | 配置地板、墙面、沙发与柜体，切换俯视与墙体显隐 |
-| 车身改色 | 按车身、机盖、车顶、车门、保险杠换色，一键应用整车 |
-| 包装外观 | 配置桶身、桶盖与标签，实时更新品牌文字 |
-| 通用展示 | 旋转、缩放、选区高亮、自动旋转、全屏、PNG 导出 |
-| 方案沟通 | 默认效果对比、本机保存、分享链接、JSON 导出 |
-| 图案工作台 | 二维图层编辑与通用车身预览，公开版附原创示意模板 |
+| C108 · 108 方户型 | 空间与水电三维展示、图纸对照、材质配置、GLB 下载 |
+| 客厅空间 | 配置地板、墙面、沙发与柜体，切换俯视与墙体显隐 |
+| 通用车身 | 按车身、机盖、车顶、车门、保险杠换色，一键应用整车 |
+| 包装桶 | 配置桶身、桶盖与标签，实时更新品牌文字 |
+| 施工场地 | 六设施足迹定位、原 CAD 二维对照、来源与暂定尺寸说明 |
+| IFG · 两层教学楼 | 分层查看、图纸对照、开口几何及 GLB 下载 |
 
-三个默认模型由代码生成，无需下载外部模型、配置数据库或登录。示意外形与颜色用于沟通，不作为生产、施工或实车贴膜依据。
+六个场景均可从首页直接进入，无需登录或配置数据库。支持旋转缩放、选区高亮、材质配置、方案分享与导出。另附二维图案工作台及原创通用示意模板。
+
+三组程序化模型与三组获维护者公开确认的 CAD 派生示例一并分发。施工场地比例暂定、实际高度未知；IFG 源资料完整性仍需返工；C108 未经现场核验。模型用于方案沟通，不作为施工、生产或安全判断依据。素材范围与来源见 [素材说明](docs/model-assets.md)。
 
 ## 本地运行
 
@@ -56,7 +58,7 @@ npm run preview  # 预览 dist/ 中的生产构建
 npm run build -- --base /your-project/
 ```
 
-将 `dist/` 放到静态 HTTP 服务。Release 附件中的 `xingjian-showroom-v0.1.1-web.zip` 是构建好的静态站点；解压后可使用任意静态服务器打开。源码归档由 GitHub 自动提供，附件 `SHA256SUMS.txt` 可用于校验下载。
+将 `dist/` 放到静态 HTTP 服务。Release 附件中的 `xingjian-showroom-v0.2.0-web.zip` 是构建好的静态站点；解压后可使用任意静态服务器打开。源码归档由 GitHub 自动提供，附件 `SHA256SUMS.txt` 可用于校验下载。
 
 ## 扩展模型与客户
 
@@ -66,7 +68,7 @@ npm run build -- --base /your-project/
 - [品牌配色](src/styles/brand.css)：一芥智能的墨绿、米白、香槟老金与深墨。
 - [架构与数据边界](docs/architecture.md)：公开版内容、授权模型接入及限制。
 
-源码保留 CAD 户型、水电、施工场地和多层建筑的适配能力。涉及真实图纸的本地数据与验收记录没有随公开版分发；自行接入时需准备有权使用的数据与对应独立核验。
+源码与静态包均包含这六个场景需要的派生 JSON/GLB 和二维对照，原始 DWG/DXF 与内部工作记录不随包分发。部署子目录时，模型和下载链接统一通过 `publicAssetUrl` 解析。
 
 ## 开源协议与致谢
 
@@ -74,6 +76,6 @@ npm run build -- --base /your-project/
 
 ## English
 
-Xingjian Showroom is a React + TypeScript + Three.js application for interactive product and space presentations. Configure materials by part, compare designs, export images and share plans through a URL. The public edition bundles original procedural interior, vehicle and packaging examples and a generic two-dimensional editor template.
+Xingjian Showroom is a React + TypeScript + Three.js application for interactive product and space presentations. Configure materials by part, compare designs, export images and share plans through a URL. The public edition includes six scenes: C108 apartment, procedural living room, generic vehicle, packaging bucket, teaching construction site and IFG two-storey classroom. A generic two-dimensional editor template is also included.
 
-Run `npm ci && npm run dev` with Node.js 22.18 or newer. Run `npm test` and `npm run build` before deployment. No account, database or private submodule is needed for the public demonstrations. CAD/GLB adapters are available in source; project-specific drawings and datasets require separate authorization and are not bundled. Released under MIT; see the notices above for attribution.
+Run `npm ci && npm run dev` with Node.js 22.18 or newer. Run `npm test` and `npm run build` before deployment. No account, database or private submodule is needed for the public demonstrations. Approved derived CAD examples are bundled with provenance and unresolved limitations; raw DWG/DXF files and private work history are excluded. The software is released under MIT; third-party asset rights remain separate. See the asset notes and attribution above.

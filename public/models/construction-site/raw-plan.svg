@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 312" role="img" aria-label="原CAD二维预览，未作比例校正">
+<rect width="420" height="312" fill="white"/><text x="10" y="10" font-size="5" fill="#234f7d">Original CAD coordinates · no metric correction · title scale not adopted</text>
+<polyline data-handle="32" points="10.0,297.0 410.0,297.0 410.0,20.0 10.0,20.0 10.0,297.0" fill="none" stroke="#b26060" stroke-width=".45"/>
+<polyline data-handle="33" points="230.0,297.0 410.0,297.0 410.0,237.0 230.0,237.0 230.0,297.0" fill="none" stroke="#52729b" stroke-width=".45"/>
+<line x1="230.0" y1="277.0" x2="410.0" y2="277.0" stroke="#52729b" stroke-width=".45"/>
+<line x1="230.0" y1="257.0" x2="410.0" y2="257.0" stroke="#52729b" stroke-width=".45"/>
+<line x1="290.0" y1="297.0" x2="290.0" y2="237.0" stroke="#52729b" stroke-width=".45"/>
+<line x1="350.0" y1="297.0" x2="350.0" y2="237.0" stroke="#52729b" stroke-width=".45"/>
+<text data-handle="38" x="235.0" y="252.0" font-size="5.0" fill="#52729b">Projeto do Canteiro de Obras</text>
+<text data-handle="39" x="235.0" y="272.0" font-size="4.0" fill="#52729b">Nome da Obra:</text>
+<text data-handle="3A" x="295.0" y="272.0" font-size="4.0" fill="#52729b">teste_2</text>
+<text data-handle="3B" x="235.0" y="292.0" font-size="4.0" fill="#52729b">Data:</text>
+<text data-handle="3C" x="295.0" y="292.0" font-size="4.0" fill="#52729b">24/06/2024</text>
+<text data-handle="3D" x="355.0" y="272.0" font-size="4.0" fill="#52729b">Escala:</text>
+<text data-handle="3E" x="355.0" y="292.0" font-size="4.0" fill="#52729b">1:100</text>
+<text data-handle="3F" x="295.0" y="252.0" font-size="4.0" fill="#52729b">Desenhado por:</text>
+<text data-handle="40" x="355.0" y="252.0" font-size="4.0" fill="#52729b">Seu Nome</text>
+<polyline data-handle="41" points="10.0,297.0 230.0,297.0 230.0,77.0 10.0,77.0 10.0,297.0" fill="none" stroke="#447e65" stroke-width=".45"/>
+<polyline data-handle="42" points="27.79232152924655,119.7481035598021 55.29232152924656,119.7481035598021 55.29232152924656,92.2481035598021 27.79232152924655,92.2481035598021 27.79232152924655,119.7481035598021" fill="none" stroke="#447e65" stroke-width=".45"/>
+<text data-handle="43" x="28.79232152924655" y="118.7481035598021" font-size="2.5" fill="#447e65">Deposito</text>
+<text data-handle="44" x="36.54232152924655" y="105.9981035598021" font-size="2.5" fill="#447e65">100 m2</text>
+<polyline data-handle="45" points="174.04066809873382,289.3774855422485 182.29066809873382,289.3774855422485 182.29066809873382,281.1274855422485 174.04066809873382,281.1274855422485 174.04066809873382,289.3774855422485" fill="none" stroke="#447e65" stroke-width=".45"/>
+<text data-handle="46" x="175.04066809873382" y="288.3774855422485" font-size="2.5" fill="#447e65">Elevador</text>
+<text data-handle="47" x="173.16566809873382" y="285.2524855422485" font-size="2.5" fill="#447e65">9 m2</text>
+<polyline data-handle="48" points="131.82383185172478,177.42983587662218 145.29883185172474,177.42983587662218 145.29883185172474,170.69233587662217 131.82383185172478,170.69233587662217 131.82383185172478,177.42983587662218" fill="none" stroke="#447e65" stroke-width=".45"/>
+<text data-handle="49" x="132.82383185172478" y="176.42983587662218" font-size="2.5" fill="#447e65">Banheiro</text>
+<text data-handle="4A" x="133.56133185172476" y="174.06108587662217" font-size="2.5" fill="#447e65">12.005000000000003 m2</text>
+<polyline data-handle="4B" points="71.56781601302876,154.40542624915923 99.06781601302876,154.40542624915923 99.06781601302876,146.15542624915923 71.56781601302876,146.15542624915923 71.56781601302876,154.40542624915923" fill="none" stroke="#447e65" stroke-width=".45"/>
+<text data-handle="4C" x="72.56781601302876" y="153.40542624915923" font-size="2.5" fill="#447e65">Refeitorio</text>
+<text data-handle="4D" x="80.31781601302876" y="150.28042624915923" font-size="2.5" fill="#447e65">30.0 m2</text>
+<polyline data-handle="4E" points="40.14678286489581,153.37470269166104 67.64678286489581,153.37470269166104 67.64678286489581,125.87470269166104 40.14678286489581,125.87470269166104 40.14678286489581,153.37470269166104" fill="none" stroke="#447e65" stroke-width=".45"/>
+<text data-handle="4F" x="41.14678286489581" y="152.37470269166104" font-size="2.5" fill="#447e65">Almoxarifado</text>
+<text data-handle="50" x="48.89678286489581" y="139.62470269166104" font-size="2.5" fill="#447e65">100 m2</text>
+<polyline data-handle="51" points="110.07633956320109,211.97705671153628 115.57633956320109,211.97705671153628 115.57633956320109,209.22705671153628 110.07633956320109,209.22705671153628 110.07633956320109,211.97705671153628" fill="none" stroke="#447e65" stroke-width=".45"/>
+<text data-handle="52" x="111.07633956320109" y="210.97705671153628" font-size="2.5" fill="#447e65">Bebedouro</text>
+<text data-handle="53" x="107.82633956320109" y="210.60205671153628" font-size="2.5" fill="#447e65">2 m2</text>
+</svg>

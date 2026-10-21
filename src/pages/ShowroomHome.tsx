@@ -20,12 +20,13 @@ export function ShowroomHome() {
         <section id="industry-demos" className="industry-section" aria-label="行业演示">
           <div className="section-heading"><div><span className="eyebrow">INDUSTRY SOLUTIONS</span><h2>行业演示方案</h2></div><span className="section-hint">演示目录 · 无需登录</span></div>
           <div className="industry-grid">
-            {industries.map((industry, index) => {
-              const product = products.find(item => item.id === industry.productId)!;
+            {industries.flatMap(industry => {
               const client = clients.find(item => item.id === industry.clientId)!;
-              return <Link className={`industry-card card-${industry.id}`} key={industry.id} to={`/showcase/${client.id}/${product.id}`}>
+              return client.productIds.map(id => ({ industry, client, product: products.find(item => item.id === id)! }));
+            }).map(({ industry, client, product }, index) => {
+              return <Link className={`industry-card card-${industry.id}`} key={product.id} to={`/showcase/${client.id}/${product.id}`}>
                 <div className="industry-preview"><ProductViewer product={product} plan={defaultPlan(client.id, product)} interactive={false} /><span className="preview-number">0{index + 1}</span><span className="preview-pill">交互演示 <ArrowUpRight size={13} /></span></div>
-                <div className="industry-card-copy"><span className="eyebrow">{industry.english}</span><div className="card-title-row"><h3>{industry.name}</h3><span className="card-arrow"><ArrowUpRight size={22} /></span></div><p>{industry.description}</p><span className="card-detail">{product.subtitle}</span></div>
+                <div className="industry-card-copy"><span className="eyebrow">{industry.english}</span><div className="card-title-row"><h3>{product.name}</h3><span className="card-arrow"><ArrowUpRight size={22} /></span></div><p>{product.description}</p><span className="card-detail">{product.subtitle}</span></div>
               </Link>;
             })}
           </div>

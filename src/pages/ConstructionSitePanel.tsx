@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Download, FileText } from 'lucide-react';
 import type { ConstructionSite } from '../scenarios/construction-site/types';
+import { publicAssetUrl } from '../utils/publicAssetUrl';
 
-const base = '/models/construction-site';
+const base = publicAssetUrl('/models/construction-site');
 
 export function ConstructionSitePanel({ selected, onSelect }: { selected: string; onSelect: (id: string) => void }) {
   const [data, setData] = useState<ConstructionSite | null>(null);
@@ -49,7 +50,7 @@ export function ConstructionSitePanel({ selected, onSelect }: { selected: string
     </dl>
     <p className="site-unknowns">待确认：{facility.unknowns.join('、')}。</p>
     <details className="site-provenance"><summary>原 CAD 顶点坐标 · 未换算</summary><pre className="site-hash">{facility.cadPoints.map(point => `(${point.map(value => value.toFixed(6)).join(', ')})`).join('\n')}</pre><p>轮廓来自几何量取；名称与翻译来自人工对应；米制尺寸为暂定换算；竖向体块、材料与颜色均为展示示意。</p></details>
-    <details className="site-provenance"><summary>比例冲突与可逆变换</summary><p>CAD 边界 handle 41 为 220×220。按作者配套输入暂定 80×80 m，缩放 80/220。INSUNITS=6 与静态图签 1:100 均不直接采用。独立尺寸控制为 0，面积文字与几何同源，尺寸未验证。</p><p>原点 CAD (10,10)；平面 XY → XZ，Y 为展示竖向。X=(CAD_X−10)×80/220−40；Z=40−(CAD_Y−10)×80/220。逆变换和原坐标保存在下载数据中。高程基准与北向未知。</p><p>来源版本：{data.source.repositoryCommit}</p><p className="site-hash">DXF SHA-256：{data.source.sha256}</p><a href={data.source.url} target="_blank" rel="noreferrer">作者固定版本来源 <ArrowUpRight size={12} /></a><p>来源许可未知，仅本轮本机/组网教学流程试验，不推断商用或再分发授权。</p></details>
+    <details className="site-provenance"><summary>比例冲突与可逆变换</summary><p>CAD 边界 handle 41 为 220×220。按作者配套输入暂定 80×80 m，缩放 80/220。INSUNITS=6 与静态图签 1:100 均不直接采用。独立尺寸控制为 0，面积文字与几何同源，尺寸未验证。</p><p>原点 CAD (10,10)；平面 XY → XZ，Y 为展示竖向。X=(CAD_X−10)×80/220−40；Z=40−(CAD_Y−10)×80/220。逆变换和原坐标保存在下载数据中。高程基准与北向未知。</p><p>来源版本：{data.source.repositoryCommit}</p><p className="site-hash">DXF SHA-256：{data.source.sha256}</p><a href={data.source.url} target="_blank" rel="noreferrer">作者固定版本来源 <ArrowUpRight size={12} /></a><p>来源许可证尚未独立核实；派生模型及二维对照已由维护者确认公开展示。原始来源权利保持不变，软件 MIT 协议不扩展授予素材权利。</p></details>
     <div className="site-downloads"><a href={`${base}/site.glb`} download="施工场地-教学示意.glb"><Download size={14} />默认示意模型 GLB</a><a href={`${base}/site.json`} download="施工场地-来源模型.json"><Download size={14} />模型与来源 JSON</a><a href={`${base}/model-notes.html`} target="_blank" rel="noreferrer">完整来源与未知项 <ArrowUpRight size={13} /></a></div>
     <p className="local-save-note">下载为默认示意体块；网页颜色配置可另存方案。仅包含边界与六足迹，空地不代表道路或可施工空间。</p>
   </section>;
